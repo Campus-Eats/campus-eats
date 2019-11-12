@@ -116,7 +116,7 @@ label {
     display: grid;
     width: 100%;
     height: 100vh;
-    background: url("imgs/hero.png") center center;
+    background: url("assets/hero.png") center center;
     background-size: cover;
     align-items: end;
 }
@@ -144,7 +144,7 @@ form.searchbar input[type=text] {
     border: solid 0.5px rgba(149, 152, 154, 0.3);
     margin-top: 20px;
 
-    background: url(imgs/search.svg) 4% center no-repeat;
+    background: url(assets/search.svg) 4% center no-repeat;
     padding-left: 60px;
     background-color: #fcfcfc;
 }
