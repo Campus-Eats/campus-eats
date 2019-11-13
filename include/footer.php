@@ -40,3 +40,8 @@
         <p>This website uses cookies to optimize your experience.
         <a href="#" target="_blank">Click here to accept cookies</a>.</p>
 </footer>
+
+<div class="bottom-bar">
+           <hr style="border: solid 0.5px #eaeaea;" />
+            <div class="name">© 2019 CampusEats Inc</div>
+</div>
