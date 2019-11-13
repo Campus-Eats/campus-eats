@@ -102,7 +102,8 @@
 </div>
 
 <!-- <!–––––––– Footer ––––––––> -->
-    <footer>
+    <?php include("include/footer.php");?>
+    <!-- <footer>
         <div class="company">
             <h4>Company</h4>
             <ul>
@@ -136,14 +137,7 @@
             </ul>
 
         </div>
-    </footer>
-    <div class="bottom-bar">
-        <hr style="border: solid 0.5px #eaeaea;" />
-
-        <div class="name">© 2019 CampusEats Inc</div>
-    </div>
-
-
+    </footer> -->
 </body>
 
 </html>

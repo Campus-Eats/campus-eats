@@ -7,6 +7,8 @@
         <meta name="description" content="Log In">
         <meta name="keywords" content="login, campus eats">
         <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/immfavicon.ico"/> -->
+
+        <?php include("include/head.php");?>
     </head>
 
     <body>
@@ -23,9 +25,7 @@
 
             </form>
         </main>
-        <?php
-        include("include/footer.php");
-        ?>
+        <?php include("include/footer.php");?>
 
     </body>
 

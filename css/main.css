@@ -4,7 +4,26 @@ body {
     height: 100%;
     margin: 0;
 }
+/* ======= Fonts (a, p, headers, etc.)====== */
 
+a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 2;
+    text-decoration: none;
+    color: #10100F;
+    text-align: left;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    font-weight: normal;
+    line-height: 2;
+    text-align: left;
+}
 /* =================Nav Bar================= */
 .nav {
     text-align: right;
@@ -53,7 +72,7 @@ label {
 .logo {
     position: absolute;
     font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
+    font-size: 48px;
     font-weight: bold;
 }
 
@@ -144,7 +163,7 @@ form.searchbar input[type=text] {
     border: solid 0.5px rgba(149, 152, 154, 0.3);
     margin-top: 20px;
 
-    background: url(assets/search.svg) 4% center no-repeat;
+    background: url("assets/search.svg") 4% center no-repeat;
     padding-left: 60px;
     background-color: #fcfcfc;
 }
