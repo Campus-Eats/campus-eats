@@ -23,7 +23,7 @@
     <div class="connect">
         <h4>Connect</h4>
         <ul>
-            <div class=socialmedia>
+            <div class="socialmedia">
 
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"> <i class="fab fa-instagram"></i></a>
