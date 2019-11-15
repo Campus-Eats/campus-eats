@@ -177,149 +177,6 @@ label {
 
 }
 
-<<<<<<< HEAD
-/* ===============Hero Section=============== */
-.hero {
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    background: url("/assets/hero.png") center center;
-    background-size: cover;
-    align-items: end;
-}
-
-#cta {
-    font-family: OpenSans;
-    font-size: 24px;
-    line-height: 1.35;
-    text-align: left;
-    margin-left: 72px;
-    margin-top: 350px;
-}
-
-.search-container {
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 300px;
-    margin-left: 72px;
-}
-
-form.searchbar input[type=text] {
-    font-family: 'Open Sans', sans-serif;
-    width: 450px;
-    height: 46px;
-    border-radius: 3px;
-    border: solid 0.5px rgba(149, 152, 154, 0.3);
-    margin-top: 20px;
-
-    background: url(assets/search.svg) 4% center no-repeat;
-    padding-left: 60px;
-    background-color: #fcfcfc;
-}
-
-
-form.searchbar button {
-    font-family: 'Open Sans', sans-serif;
-    width: 140px;
-    height: 46px;
-    border-radius: 3px;
-    background-color: #aeaeae;
-}
-
-
-/* ===============Four Sections=============== */
-.title {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.36;
-    text-align: center;
-    margin: 50px;
-}
-
-.grid-12-col {
-    margin: 10px 72px 72px 50px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
-}
-
-.six {
-    grid-column-end: span 6;
-    position: relative;
-}
-
-
-.six img {
-    width: 100%;
-    max-width: 640px;
-}
-
-.paragraph {
-   margin-top:20%; 
-}
-
-.paragraph h3 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 2;
-    text-align: left;
-    
-}
-
-.paragraph p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 2;
-    text-align: left;
-}
-
-
-/*Register Section*/
-.register{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 10px;
-    font-weight: normal;
-    text-align: center;
-}
-.register-form {
-     display: inline-block;
-     margin-bottom: 40px;
-}
-
-form.register-form input[type=text], input[type=password] {
-  padding: 15px;
-  margin: 5px 0 22px 0px;
-/*  display: block;*/
-  border: none;
-  background: #f1f1f1;
-  width: 100%;
-  border-radius: 3px;
-  box-sizing: border-box;
- 
-}
-
-
-.registerbtn {
-  background-color: #eaeaea;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  opacity: 0.7;
-  border-radius: 3px;
-  width: 100%;
-/*  display: block;*/
-}
-
-.registerbtn:hover {
-  opacity: 1;
-}
-
-
-=======
->>>>>>> 3da7295a38eb314454253cd01c9f8e1961a690e1
 /* ===============Footer=============== */
 
 footer {
@@ -390,9 +247,23 @@ li a:hover {
 
 
 
-/* ============responsive column for mobiles============  */
+/* ============responsive for tablets============  */
+@media only screen and (max-width:768px) {
+
+    #cta {
+        text-align: center;
+        margin-bottom: 8%;
+    }
+
+    .search-container {
+        width: 400px;
+        height: 450px;
+        margin-bottom: 8%;
+        position: center;
+    }
+
+    /* ============responsive column for mobiles============  */
     @media only screen and (max-width: 480px) {
-<<<<<<< HEAD
         .hero {
             display: flex;
             flex-direction: column;
@@ -433,8 +304,6 @@ li a:hover {
         }
 
 
-=======
->>>>>>> 3da7295a38eb314454253cd01c9f8e1961a690e1
 
         footer {
             grid-template-columns: 1fr;
