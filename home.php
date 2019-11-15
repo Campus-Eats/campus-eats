@@ -6,6 +6,8 @@
    <?php
         // include("include/connect.php");
         include("include/head.php");
+        echo '<link href="css/main.css" rel="stylesheet">';
+        echo '<link href="css/home.css" rel="stylesheet">';
    ?>
 </head>
 

@@ -177,6 +177,7 @@ label {
 
 }
 
+<<<<<<< HEAD
 /* ===============Hero Section=============== */
 .hero {
     display: grid;
@@ -317,6 +318,8 @@ form.register-form input[type=text], input[type=password] {
 }
 
 
+=======
+>>>>>>> 3da7295a38eb314454253cd01c9f8e1961a690e1
 /* ===============Footer=============== */
 
 footer {
@@ -387,23 +390,9 @@ li a:hover {
 
 
 
-/* ============responsive for tablets============  */
-@media only screen and (max-width:768px) {
-
-    #cta {
-        text-align: center;
-        margin-bottom: 8%;
-    }
-
-    .search-container {
-        width: 400px;
-        height: 450px;
-        margin-bottom: 8%;
-        position: center;
-    }
-
-    /* ============responsive column for mobiles============  */
+/* ============responsive column for mobiles============  */
     @media only screen and (max-width: 480px) {
+<<<<<<< HEAD
         .hero {
             display: flex;
             flex-direction: column;
@@ -444,6 +433,8 @@ li a:hover {
         }
 
 
+=======
+>>>>>>> 3da7295a38eb314454253cd01c9f8e1961a690e1
 
         footer {
             grid-template-columns: 1fr;
