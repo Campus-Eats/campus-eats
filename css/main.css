@@ -6,6 +6,10 @@ body {
     margin: 0;
     font-size: 16px;
 }
+
+main {
+    padding-top: 60px;
+}
 /* ======= Fonts (a, p, headers, etc.)====== */
 
 a {
@@ -80,7 +84,6 @@ h4 {
     position: fixed;
     width: 100vw;
     z-index: 100000;
-    
     overflow: hidden;
 }
 
@@ -90,17 +93,23 @@ h4 {
     background-color: #eaeaea;
 }
 
-.menu a {
+.nav-menu {
     clear: right;
     text-decoration: none;
     color: #000;
     margin: 0 10px;
-    line-height: 70px;
+    line-height: 40px;
     font-family: 'Open Sans', sans-serif;
 }
+.nav-menu li {
+    display: inline-block;
+    margin: 1em;
+}
 
-.menu a:hover {
-    border-bottom: 3px solid grey;
+.nav-menu:hover {
+    transition: color 0.1s ease;
+    border-bottom: 3px solid #ED8249;
+    color: #ED8249;
 }
 
 label {
@@ -118,9 +127,6 @@ label {
 
 .logo {
     position: absolute;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
 }
 
 /*
@@ -142,7 +148,12 @@ label {
 }
 */
 
-
+/* Nav Bar */
+.nav-menu:hover {
+    transition: color 0.1s ease;
+    border-bottom: 3px solid #ED8249;
+    color: #ED8249;
+}
 
 /* ===============Responsive Nav Bar=============== */
 
@@ -305,6 +316,6 @@ li a:hover {
 
 
 
-        footer {
+        .footer {
             grid-template-columns: 1fr;
         }
