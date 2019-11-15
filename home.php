@@ -93,7 +93,7 @@
 
         <!--REGISTER SECTION-->
     <div class="register">
-        <h2 class="title">Register Now<h2>
+        <h2 class="title">Register Now</h2>
             <form action="#" class="register-form">
 
                 <input type="text" placeholder="Enter Email" name="email" required><br>
