@@ -1,5 +1,5 @@
 <header>
-    <a href="home.html"><img src="assets/CampusEatsLogo.png" alt="logo for CampusEats"></a>
+    <a href="home.html"><img src="assets/logo_full.svg" alt="logo for CampusEats"></a>
     <nav>    
         <ul>
             <li><a href="home.php">Home</a></li>

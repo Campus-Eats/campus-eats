@@ -4,9 +4,8 @@
 <head>
     <title>CampusEats</title>
    <?php
-        include("include/connect.php");
+        // include("include/connect.php");
         include("include/head.php");
-        echo '<link href="css/main.css" rel="stylesheet">';
    ?>
 </head>
 
@@ -138,7 +137,14 @@
             </ul>
 
         </div>
-    </footer> -->
+    </footer>
+    <div class="bottom-bar">
+        <hr style="border: solid 0.5px #eaeaea;" />
+
+        <div class="name">© 2019 CampusEats Inc</div>
+    </div> -->
+
+
 </body>
 
 </html>
