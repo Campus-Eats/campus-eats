@@ -149,11 +149,24 @@ label {
 */
 
 /* Nav Bar */
-.nav-menu:hover {
-    transition: color 0.1s ease;
-    border-bottom: 3px solid #ED8249;
-    color: #ED8249;
+
+li a {
+    color: black;
+    line-height: 16px;
+    text-decoration: none;
 }
+
+li a:hover {
+    color: darkgreen;
+    transition: color 0.1s ease;
+    border-bottom: 3px solid darkgreen;
+}
+
+/* .nav-menu:hover {
+    transition: color 0.1s ease;
+    border-bottom: 3px solid darkgreen;
+    color: darkgreen;
+} */
 
 /* ===============Responsive Nav Bar=============== */
 
@@ -226,15 +239,6 @@ footer ul {
     padding: 5px;
 }
 
-li a {
-    color: black;
-    line-height: 16px;
-    text-decoration: none;
-}
-
-li a:hover {
-    color: darkgreen;
-}
 
 
 /* ===============Bottom Bar=============== */
