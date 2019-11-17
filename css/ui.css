@@ -1,0 +1,28 @@
+/* REUSABLE BASE CLASSES  */
+.field {
+    min-width: 400px;
+    height: 45px;
+    border-radius: 3px;
+    border: solid 0.5px rgba(149, 152, 154, 0.3);
+    background-color: #fcfcfc;
+    padding: 0px 30px;
+}
+
+.button {
+    width: 140px;
+    height: 45px;
+    border-radius: 2.5px;
+}
+
+.button-primary { 
+    background-color: #ED8249;
+}
+
+.button-small {
+    width: 160px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid 2px #f88325;
+    background-color: #ffffff;
+}
+

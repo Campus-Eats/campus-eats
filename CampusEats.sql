@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 13, 2019 at 10:33 PM
+-- Generation Time: Nov 01, 2019 at 10:08 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -46,8 +46,7 @@ CREATE TABLE `foodprograms` (
   `programName` text COLLATE utf8_unicode_ci NOT NULL,
   `password` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `email` text COLLATE utf8_unicode_ci NOT NULL,
-  `streetAddress` text COLLATE utf8_unicode_ci NOT NULL,
-  `city` text COLLATE utf8_unicode_ci NOT NULL,
+  `address` text COLLATE utf8_unicode_ci NOT NULL,
   `phone` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `hours` varchar(300) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -62,7 +61,22 @@ CREATE TABLE `orders` (
   `orderID` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   `programID` int(11) NOT NULL,
-  `foodID` int(11) NOT NULL
+  `foodID` int(11) NOT NULL,
+  `confirmPickup` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `reviewID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `programID` int(11) NOT NULL,
+  `rating` int(11) NOT NULL,
+  `comments` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -78,13 +92,6 @@ CREATE TABLE `users` (
   `firstname` text COLLATE utf8_unicode_ci NOT NULL,
   `lastname` text COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`userID`, `email`, `password`, `firstname`, `lastname`) VALUES
-(3, 'me@me.com', 'mrme', 'mr', 'me');
 
 --
 -- Indexes for dumped tables
@@ -110,6 +117,14 @@ ALTER TABLE `orders`
   ADD KEY `foodID` (`foodID`),
   ADD KEY `programID` (`programID`),
   ADD KEY `userID` (`userID`);
+
+--
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`reviewID`),
+  ADD KEY `userID` (`userID`),
+  ADD KEY `programID` (`programID`);
 
 --
 -- Indexes for table `users`
@@ -140,10 +155,16 @@ ALTER TABLE `orders`
   MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `reviewID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
