@@ -14,7 +14,7 @@ main {
 
 a {
     font-size: 1rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     line-height: 2;
     text-decoration: none;
     color: #10100F;
@@ -106,12 +106,6 @@ h4 {
     margin: 1em;
 }
 
-.nav-menu:hover {
-    transition: color 0.1s ease;
-    border-bottom: 3px solid #ED8249;
-    color: #ED8249;
-}
-
 label {
     margin: 0 40px 0 0;
     font-size: 26px;
@@ -148,7 +142,7 @@ label {
 }
 */
 
-/* Nav Bar */
+/* Link states*/
 
 li a {
     color: black;
@@ -157,11 +151,13 @@ li a {
 }
 
 li a:hover {
-    color: darkgreen;
     transition: color 0.1s ease;
     border-bottom: 3px solid darkgreen;
+    color: darkgreen;
 }
-
+/* @Yang - can remove unless you want to make specific 
+            to the nav links that are different than from 
+            other links  */
 /* .nav-menu:hover {
     transition: color 0.1s ease;
     border-bottom: 3px solid darkgreen;
@@ -225,7 +221,7 @@ footer ul {
     font-size:16px; 
     font-weight: bold;
     margin-bottom: 40px;
-    padding-left:39px; 
+    /* padding-left:39px;  */
 }
 
 
