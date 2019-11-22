@@ -1,28 +1,87 @@
-/* REUSABLE BASE CLASSES  */
+/*  
+    NAMING CONVENTION FOR HTML CLASSES/IDS
+    container> content_wrapper 
+*/
+
+/* ========== REUSABLE BASE CLASSES =========== */
 .field {
     min-width: 400px;
-    height: 45px;
+    height: 40px;
     border-radius: 3px;
     border: solid 0.5px rgba(149, 152, 154, 0.3);
     background-color: #fcfcfc;
     padding: 0px 30px;
 }
 
+
+/* ================ BUTTONS ================= */
 .button {
-    width: 140px;
+    width: 160px;
     height: 45px;
-    border-radius: 2.5px;
+    font-weight: bold;
 }
 
 .button-primary { 
     background-color: #ED8249;
+    border: solid 2px #ED8249;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.button-secondary { 
+    background-color: #fff;
+    border-color: #f88325;
+    color: #f88325;
+    border: solid 1px #f88325;
+    border-radius: 5px;
 }
 
 .button-small {
+    font-weight: bold;
     width: 160px;
     height: 40px;
-    border-radius: 10px;
-    border: solid 2px #f88325;
-    background-color: #ffffff;
 }
 
+.button_sm_root_link {
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-align: center;
+    color: #E37630;
+}
+.button_sm_root_link:hover {
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #E37630;
+    color: #fff;
+}
+
+.button-small:hover {
+    background-color: #E37630;
+    border: solid 2px #E37630;
+    margin-left: 1rem;
+    color: #fff;
+}
+
+/* ================= IMAGES ================= */
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* ========== HEADING LINE DIVIDER =========== */
+.header_line_divider { 
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.listEl_container_address {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: left;
+    color: #707070;
+    margin-bottom: 0.5rem;
+}

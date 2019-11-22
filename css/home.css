@@ -9,7 +9,6 @@
 }
 
 #cta {
-    font-family: OpenSans;
     font-size: 24px;
     line-height: 1.35;
     text-align: left;
@@ -18,13 +17,11 @@
 }
 
 .search-container {
-    font-family: 'Open Sans', sans-serif;
     margin-bottom: 300px;
     margin-left: 72px;
 }
 
 form.searchbar input[type=text] {
-    font-family: 'Open Sans', sans-serif;
     width: 450px;
     height: 46px;
     border-radius: 3px;
