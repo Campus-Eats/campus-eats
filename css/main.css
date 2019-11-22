@@ -84,6 +84,14 @@ h4 {
     text-align: left;
     color: #252525;
 }
+
+/* footer header */
+h5 {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    color: #707070;
+}
 /* =================Nav Bar================= */
 .nav {
     text-align: right;
