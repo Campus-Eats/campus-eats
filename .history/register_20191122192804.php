@@ -20,19 +20,18 @@
                     <img src="assets/white-net.jpg">
                 </section>
 
-                <div class="item2">
-                    <form class="text" action="processing-program-register.php" method="POST"><br>
-                        <h1 id="welcome">Program Register</h1>
-                        <p>Program Name</p><input class="textfield" name="programName" type="text" required />
+            <div class="item2">
+                    <form class="text" action="processing-register.php" method="POST"><br>
+                        <h1 id="welcome">Register</h1>
+                        <div class="namefield">
+                        <p>First Name</p><input class="nametexts" name="firstname" type="text" required />
+                        </div>
+                        <div class="namefield">
+                        <p>Last Name</p><input class="nametexts" name="lastname" type="text" required />
+                        </div>
                         <br>
                         <p>Email</p><input class="textfield" name="email" type="email" required /><br>
                         <p>Password</p><input class="textfield" name="password" type="password" required /><br>
-
-                        <p>Street Address</p><input class="textfield" name="streetAddress" type="text" required />
-                        <p>City</p><input class="textfield" name="city" type="text" placeholder="xxx-xxx-xxxx" required />
-                        <p>Phone Number</p><input class="textfield" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
-                        <p>Hours</p><input class="textfield" name="hours" type="text" required />
-
 
                         <p>By continuing the registration process, I agree to the <a class="subgreytext" href="terms.php">Terms and Conditions.</a></p>
 
