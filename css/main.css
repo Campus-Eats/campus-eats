@@ -8,17 +8,9 @@ body {
 }
 
 main {
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
-.container {
-    max-width: calc(1280px + 4rem);
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 100%;
-    padding: 1rrem ;
-    box-sizing: border-box;
-}
 /* ======= Fonts (a, p, headers, etc.)====== */
 
 a {
@@ -93,52 +85,7 @@ h5 {
     color: #707070;
 }
 /* =================Nav Bar================= */
-.nav {
-    text-align: right;
-    height: 70px;
-    line-height: 70px;
-    background-color: #eaeaea;
-    position: fixed;
-    width: 100vw;
-    z-index: 100000;
-    overflow: hidden;
-}
 
-.menu {
-    margin: 0 72px 0 72px;
-    z-index: 10000;
-    background-color: #eaeaea;
-}
-
-.nav-menu {
-    clear: right;
-    text-decoration: none;
-    color: #000;
-    margin: 0 10px;
-    line-height: 40px;
-    font-family: 'Open Sans', sans-serif;
-}
-.nav-menu li {
-    display: inline-block;
-    margin: 1em;
-}
-
-label {
-    margin: 0 40px 0 0;
-    font-size: 26px;
-    line-height: 70px;
-    display: none;
-    width: 26px;
-    float: right;
-}
-
-#toggle {
-    display: none;
-}
-
-.logo {
-    position: absolute;
-}
 
 /*
 .nav-icon1 img{
@@ -184,10 +131,6 @@ li a:hover {
 /* ===============Responsive Nav Bar=============== */
 
 @media only screen and (max-width: 768px) {
-    label {
-        display: block;
-        cursor: pointer;
-    }
 
     .nav {
         z-index: 500;
@@ -289,6 +232,7 @@ footer ul {
         margin-bottom: 8%;
         position: center;
     }
+}
 
     /* ============responsive column for mobiles============  */
     @media only screen and (max-width: 480px) {
@@ -336,3 +280,4 @@ footer ul {
         .footer {
             grid-template-columns: 1fr;
         }
+        
