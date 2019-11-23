@@ -24,7 +24,7 @@ main {
 a {
     font-size: 1rem;
     /* font-weight: bold; */
-    line-height: 4;
+    line-height: 2;
     text-decoration: none;
     color: #10100F;
     text-align: left;
@@ -34,7 +34,7 @@ p {
     font-size: 1rem;
     font-weight: 300;
     font-weight: normal;
-    line-height: 1.5;
+    line-height: 1.3;
     text-align: left;
     letter-spacing: normal;
     text-align: left;
