@@ -7,23 +7,43 @@
         <meta name="description" content="Log In">
         <meta name="keywords" content="login, campus eats">
         <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/immfavicon.ico"/> -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="css/login-register.css" rel="stylesheet">
 
-        <?php include("include/head.php");?>
     </head>
 
     <body>
         <?php
         include("include/header.php");
-        ?>
+        ?> 
+
         <main>
-            <form action="processing-login.php" method="POST">
-                <h1>Log in</h1>
-                Email: <input name="email" type="email" required />
-                Password: <input name="password" type="password" required />
+            <div class="parent"> 
+                <section class="item1">
+                    <img src="assets/white-net.jpg">
+                </section>
 
-                <input type="submit">
+                <div class="item2">
+                    <form action="processing-login.php" method="POST">
+                    <h1 id="welcome">Welcome</h1>
+                    <p class="subgreytext">Not a member yet? <a href="register.php" id="blacktext">Sign up now</a></p>
+                    <p class="text">Email address</p> <input class="textfield" name="email" type="email" required />
+                    <p class="text">Password</p> <input class="textfield" name="password" type="password" required />
 
-            </form>
+                    <br>                    
+                    
+                    <p class="text">By continuting, you agree to the <a class="subgreytext" target="_blank" href="#">Terms and Conditions</a>.</p>
+
+                    <!-- <input type="checkbox"> <p>Remember me</p> -->
+                    <input id="button" type="submit" value="Login Now">
+
+                </form>
+
+                </div>
+
+                <!-- <a><p>Forgot your password?</p></a> -->
+                
+            </div>
         </main>
         <?php
         include("include/footer.php");

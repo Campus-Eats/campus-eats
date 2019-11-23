@@ -21,7 +21,7 @@
         <div class="search_nav_container">
             <div class="search_nav_content_container">
                 <h2 class="header_2">Search</h2>
-                <form class="search-bar" action="handlers/searchResults.php?location=<?php echo($location) ?>" method="GET">
+                <form class="search-bar" action="handlers/searchResults.php" type="GET">
                     <input class="field" type="text" placeholder="Enter Your Location" name="search">
                     <button class="button button-primary"type="submit">Search</button>
                 </form>
@@ -33,28 +33,14 @@
             <div class="container">
                 <div class="search_results_grid_12_col">
                     <div class="search_results_container" id="two">
-                        <div class="legend_container">
-                            <div class="legend_content_wrapper">
-                                <h5 id="legend_header_text">Legend</h4>
-                                <div class="legend_holder">
-                                    <span class="icon_holder">
-                                        <i class="icon">
-                                            <img src="assets/freshProduce.svg" alt="fresh food">
-                                        </i> 
-                                    </span>
-                                    <p>Fresh Produce</p>
-                                    <span class="icon_holder">
-                                        <i class="icon">
-                                            <img src="assets/cannedFood.svg" alt="canned food">
-                                        </i> 
-                                    </span>
-                                    <p>Canned Goods</p>
-                                </div>
-                            </div>
-                        </div>
                         <div class="header_line_divider">
                             <h2>Results</h2>
                         </div> 
+                        <div class="legend_container">
+                            <div class="legend_content_wrapper">
+                                
+                            </div>
+                        </div>
                         <div class="listEl_container">
                             <div class="listEl_full_content_container">
                                     <div class="listEl_box_small_img">

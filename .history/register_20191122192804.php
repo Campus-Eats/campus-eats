@@ -20,7 +20,7 @@
                     <img src="assets/white-net.jpg">
                 </section>
 
-                <div class="item2">
+            <div class="item2">
                     <form class="text" action="processing-register.php" method="POST"><br>
                         <h1 id="welcome">Register</h1>
                         <div class="namefield">
