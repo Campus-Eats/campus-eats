@@ -1,7 +1,10 @@
 <?php
 
 $location = $_GET['search'];
-$location = 
+
+include("include/connect.php");
+
+
 
 
 ?>
