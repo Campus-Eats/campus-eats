@@ -50,45 +50,44 @@
 
                 <!-- <!–––––––– how it works––––––––> -->
         <h2 class="title">How it Works</h2>
-                <div class="grid-12-col">
-
-                    <div class="six">
-                        <div class="six-img">
-                            <img src="assets/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="six">
-                        <div class="paragraph">
-                            <h3>Find a Food Program</h3>
-                            <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
-                        </div>
-                    </div>
-                    <div class="six">
-                        <div class="paragraph">
-                            <h3>Find a Food Program</h3>
-                            <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
-                        </div>
-                    </div>
-                    <div class="six">
-                        <div class="six-img">
-
-                            <img src="assets/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="six">
-                        <div class="six-img">
-                            <img src="assets/1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="six">
-                        <div class="paragraph">
-                            <h3>Find a Food Program</h3>
-                            <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
-                        </div>
+            <div class="grid-12-col">
+                <div class="six">
+                    <div class="six-img">
+                        <img src="assets/1.png" alt="">
                     </div>
                 </div>
+                <div class="six">
+                    <div class="paragraph">
+                        <h3>Find a Food Program</h3>
+                        <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
+                    </div>
+                </div>
+                <div class="six">
+                    <div class="paragraph">
+                        <h3>Find a Food Program</h3>
+                        <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
+                    </div>
+                </div>
+                <div class="six">
+                    <div class="six-img">
 
-            <!--REGISTER SECTION-->
+                        <img src="assets/1.png" alt="">
+                    </div>
+                </div>
+                <div class="six">
+                    <div class="six-img">
+                        <img src="assets/1.png" alt="">
+                    </div>
+                </div>
+                <div class="six">
+                    <div class="paragraph">
+                        <h3>Find a Food Program</h3>
+                        <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
+                    </div>
+                </div>
+            </div>
+
+        <!--REGISTER SECTION-->
         <div class="register">
             <h2 class="title">Register Now</h2>
                 <form action="#" class="register-form">
@@ -100,7 +99,7 @@
                 </form>
     </div>
 
-    <!-- <!–––––––– Footer ––––––––> -->
+    <!-- Footer -->
         <?php include("include/footer.php");?>
 
     </main>

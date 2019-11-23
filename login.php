@@ -9,13 +9,12 @@
         <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/immfavicon.ico"/> -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="css/login-register.css" rel="stylesheet">
-
+ 
+        <?php include("include/head.php");?>
     </head>
 
     <body>
-        <?php
-        include("include/header.php");
-        ?> 
+    <?php include("include/header.php");?>
 
         <main>
             <div class="parent"> 
