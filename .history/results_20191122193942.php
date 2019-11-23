@@ -21,7 +21,7 @@
         <div class="search_nav_container">
             <div class="search_nav_content_container">
                 <h2 class="header_2">Search</h2>
-                <form class="search-bar" action="handlers/searchResults.php?location=<?php echo($location) ?>" method="GET">
+                <form class="search-bar" action="handlers/searchResults.php?location=<?php echo($city) ?>" method="GET">
                     <input class="field" type="text" placeholder="Enter Your Location" name="search">
                     <button class="button button-primary"type="submit">Search</button>
                 </form>
