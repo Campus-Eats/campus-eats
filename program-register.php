@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <?
+        <?php
         include("include/header.php");
         ?>
         <main>

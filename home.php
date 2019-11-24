@@ -4,7 +4,7 @@
 <head>
     <title>CampusEats</title>
    <?php
-        // include("include/connect.php");
+        include("include/connect.php");
         include("include/head.php");
         include("include/header.php");
         echo '<link href="css/main.css" rel="stylesheet">';
@@ -40,7 +40,7 @@
                 Fill Your Fridge with Healthy and Affordable Options.
             </div>
             <div class="search-container">
-                <form class="searchbar" action="/campus-eats/handlers/searchResults.php?location=<?php echo($location) ?>" method="GET">
+                <form class="searchbar" action="./handlers/searchResults.php" method="POST">
                     <input type="text" placeholder="Enter Your Location" name="search">
                     <button type="submit">Find Food</button>
                 </form>

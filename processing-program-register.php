@@ -13,7 +13,7 @@ include("include/connect.php");
 
 $stmt = $pdo->prepare("INSERT INTO `foodprograms` (`programID`, `programName`, `email`, `password`,`streetAddress`, `city`, `phone`, `hours`) VALUES (NULL, '$programName', '$email', '$password', :streetAddress, '$city', :phone, :hours)");
 
-$stmt->execute(array(':hours' => $hours, ':phone' => $phone, ':streetAddress' => $streetAddress,));
+$stmt->execute(array(':hours' => $hours, ':phone' => $phone, ':streetAddress' => $streetAddress));
 
 
 

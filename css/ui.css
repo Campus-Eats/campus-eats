@@ -3,32 +3,42 @@
     container> content_wrapper 
 */
 
+
+
+.ce-container {
+    max-width: calc(1280px + 4rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 /* ========== REUSABLE BASE CLASSES =========== */
-.field {
-    min-width: 400px;
-    height: 40px;
+.ce-field {
+    width: 100%;
+    height: 45px;
     border-radius: 3px;
-    border: solid 0.5px rgba(149, 152, 154, 0.3);
-    background-color: #fcfcfc;
+    border: solid 1px rgba(149, 152, 154, 0.3);
     padding: 0px 30px;
 }
 
 
 /* ================ BUTTONS ================= */
-.button {
-    width: 160px;
+.ce-button {
     height: 45px;
+    padding: 0px 20px;
     font-weight: bold;
 }
 
-.button-primary { 
+.ce-button-primary { 
     background-color: #ED8249;
     border: solid 2px #ED8249;
     border-radius: 5px;
     color: #fff;
 }
 
-.button-secondary { 
+.ce-button-secondary { 
     background-color: #fff;
     border-color: #f88325;
     color: #f88325;
@@ -43,17 +53,8 @@
     height: 40px;
 }
 
-.button_sm_root_link {
-    line-height: 1.33;
-    letter-spacing: normal;
-    text-align: center;
-    color: #E37630;
-}
-.button_sm_root_link:hover {
-    color: #fff;
-}
-
-.button:hover {
+/* ============== BUTTON STATES ============== */
+.ce-button:hover {
     background-color: #E37630;
     color: #fff;
 }
@@ -71,18 +72,39 @@ img {
     max-height: 100%;
 }
 
-/* ========== HEADING LINE DIVIDER =========== */
+/* ========== HEADING LINE DIVIDER ========== */
 .header_line_divider { 
     margin-top: 8px;
     margin-bottom: 20px;
 }
 
-.listEl_container_address {
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.38;
-    letter-spacing: normal;
-    text-align: left;
-    color: #707070;
-    margin-bottom: 0.5rem;
+
+
+.ce-col {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 0rem;
+}
+
+.ce-grid-2, .ce-grid-3, .ce-grid-4 {
+    display: flex;
+    margin: 0 -1rem;
+}
+
+.ce-grid-2 > .ce-col {
+    width: 50%;
+}
+
+.ce-grid-3 > .ce-col {
+    width: 33.33%;
+}
+
+.ce-grid-4 > .ce-col {
+    width: 25%;
+}
+
+@media only screen and (max-width: 768px) {
+    .ce-col {
+        width: 100%;
+    }
 }

@@ -5,7 +5,7 @@
             <ul class="nav-list">
                 <li><a href="home.php">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <!-- <li><a href="results.php">Search</a></li> -->
+                <!-- <li><a href="search.php">Search</a></li> -->
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="login.php">LogIn</a></li>
