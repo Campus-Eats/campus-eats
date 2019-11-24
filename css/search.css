@@ -42,10 +42,6 @@
     width: 30%;
 }
 
-
-
-
-
 .search_results_grid_12_col {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -113,10 +109,6 @@
     object-fit: contain;
     float: left;
 }
-/* .listEl_small_img img {
-    width: 100%;
-    height: 100%;
-} */
 
 .listEl_content_container .bottom_content_holder {
     justify-content: flex-start;
@@ -147,7 +139,7 @@
     width: 100%;
 }
 
-
+/* ====== RESPONSIVE MOBILE/TABLET ====== */
 @media only screen and (max-width: 768px) {
     .search_nav_content {
         flex-direction: column;

@@ -1,9 +1,4 @@
-/*  
-    NAMING CONVENTION FOR HTML CLASSES/IDS
-    container> content_wrapper 
-*/
-
-
+/* =========== REUSABLE UI CLASSES =========== */
 
 .ce-container {
     max-width: calc(1280px + 4rem);
@@ -77,8 +72,6 @@ img {
     margin-top: 8px;
     margin-bottom: 20px;
 }
-
-
 
 .ce-col {
     margin-left: 1rem;

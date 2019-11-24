@@ -6,7 +6,8 @@
         <meta charset="utf-8" />
         <meta name="description" content="Register">
         <meta name="keywords" content="register, campus eats">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
+        <!-- <?php include("include/head.php");?> -->
         <link href="css/login-register.css" rel="stylesheet">
     </head>
 

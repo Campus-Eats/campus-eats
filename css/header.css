@@ -32,6 +32,7 @@ nav {
     float: right;
 }
 
+/* ====== RESPONSIVE FOR MOBILE/TABLET ====== */
 @media only screen and (max-width: 768px) {
     .hamburger-menu  {
         display: block;

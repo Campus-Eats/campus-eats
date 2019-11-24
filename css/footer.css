@@ -1,0 +1,53 @@
+/* ===============Footer=============== */
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    padding: 40px 72px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.company, .product, .connect {
+    grid-column: span 4;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.company h4, .product h4, .connect h4{
+    font-size:16px; 
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.socialmedia {
+    padding: 5px;
+}
+
+.socialmedia > * {
+    color: black;
+    padding: 5px;
+}
+
+
+/* ===============Bottom Bar=============== */
+.bottom-bar {
+    height: 35px;
+    border-color: black;
+    padding-left: 80px;
+    padding: 5px 80px;
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+}
+
+.name {
+    float: left;
+    padding: 5px;
+    letter-spacing: 2px;
+}
+

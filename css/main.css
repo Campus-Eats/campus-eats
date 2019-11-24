@@ -1,3 +1,5 @@
+/*  ============= TAG OVERRIDES ==============  */
+/* This stylesheet are for overriding tags  */
 html,
 body {
     font-family: 'Open Sans', sans-serif;
@@ -11,7 +13,7 @@ main {
     padding-top: 70px;
 }
 
-/* ======= Fonts (a, p, headers, etc.)====== */
+/* ======= FONTS (a, p, headers, etc.) ======= */
 
 a {
     font-size: 1rem;
@@ -84,29 +86,8 @@ h5 {
     text-align: left;
     color: #707070;
 }
-/* =================Nav Bar================= */
 
-
-/*
-.nav-icon1 img{
-	max-width: 24px;
-	float: none;
-  	position: center;
-	top: 20px;
-  	left: 84%;
-}
-
-.nav-icon2 img{
-	max-width: 24px;
-	transform: translate(-50%, -50%);
-	float: none;
-  	position: center;
-	top: 20px;
-  	left: 87%;
-}
-*/
-
-/* Link states*/
+/* ============== LINK STATES ==============*/
 
 li a {
     color: black;
@@ -128,9 +109,10 @@ li a:hover {
     color: darkgreen;
 } */
 
-/* ===============Responsive Nav Bar=============== */
-
-@media only screen and (max-width: 768px) {
+/* this section below can be removed since we
+have it under header.css  */
+/* ============== Responsive Nav Bar ============== */
+/* @media only screen and (max-width: 768px) {
 
     .nav {
         z-index: 500;
@@ -155,129 +137,5 @@ li a:hover {
         display: block;
     }
 
-}
+} */
 
-/* ===============Footer=============== */
-
-footer {
-    font-family: 'Open Sans', sans-serif;
-    padding: 40px 72px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: 20px;
-}
-
-footer ul {
-    list-style: none;
-}
-
-.company, .product, .connect {
-    grid-column: span 4;
-    font-size: 14px;
-    line-height: 30px;
-}
-
-.company h4, .product h4, .connect h4{
-    font-size:16px; 
-    font-weight: bold;
-    margin-bottom: 40px;
-    /* padding-left:39px;  */
-}
-
-
-.socialmedia {
-    padding: 5px;
-    
-}
-
-.socialmedia > * {
-    color: black;
-    padding: 5px;
-}
-
-
-
-/* ===============Bottom Bar=============== */
-.bottom-bar {
-    height: 35px;
-    border-color: black;
-    padding-left: 80px;
-    padding: 5px 80px;
-    margin: auto;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 10px;
-
-}
-
-.name {
-    float: left;
-    padding: 5px;
-    letter-spacing: 2px;
-}
-
-
-
-
-/* ============responsive for tablets============  */
-@media only screen and (max-width:768px) {
-
-    #cta {
-        text-align: center;
-        margin-bottom: 8%;
-    }
-
-    .search-container {
-        width: 400px;
-        height: 450px;
-        margin-bottom: 8%;
-        position: center;
-    }
-}
-
-    /* ============responsive column for mobiles============  */
-    @media only screen and (max-width: 480px) {
-        .hero {
-            display: flex;
-            flex-direction: column;
-            justify-items: center;
-        }
-        
-        .searchbar {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .search-container{
-            margin-left: 0px;
-        }
-        
-        #cta {
-        position: relative;
-        width:100%;
-            margin-left: 0;
-        font-size: 22px; 
-        }
-        
-        form.searchbar input[type=text] {
-        width: 250px;
-        margin-top:5px; 
-        display: inline-block;
-}
-        form.searchbar button {
-            display: inline-block;
-        }
-
-        .grid-12-col {
-            grid-template-columns: 1fr;
-        }
-
-        .six {
-            grid-column-end: span 1;
-        }
-
-
-
-        .footer {
-            grid-template-columns: 1fr;
-        }
-        

@@ -18,7 +18,7 @@
 <head>
     <title>Search Results</title>
     <?php include("include/head.php");?>
-    <link rel="stylesheet" type="text/css" href="css/results.css">
+    <link rel="stylesheet" type="text/css" href="css/search.css">
 
 </head>
 <body>
