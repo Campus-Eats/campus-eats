@@ -79,9 +79,13 @@
     align-items: center;
 }
 .listEl_header_location {
-    margin-left: 2rem;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    margin-left: auto;   
+    color: #707070;
+    font-size: 0.8rem;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 }
-
+.listEl_header_location i {
+    margin-right: 0.5rem;
+}
 .listEl_header_top_wrapper p {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -91,6 +95,8 @@
 
 .listEl_content_container {
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .listEl_container_address {
@@ -111,10 +117,10 @@
 }
 
 .listEl_content_container .bottom_content_holder {
-    justify-content: flex-start;
     display: flex;
     align-items: center;
     padding-top: 0.8rem;
+    margin-top: auto;
 }
 
 .bottom_content_holder p {

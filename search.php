@@ -24,7 +24,6 @@
 <body>
     <?php include("include/header.php");?>
     <main>
-
         <!-- SEARCH NAVIGATION -->
         <div class="search_nav">
             <div class="ce-container search_nav_content">
@@ -36,13 +35,12 @@
             </div>
         </div>
 
-            <!-- DISPLAY SEARCH RESULTS & MAP  -->
+        <!-- DISPLAY SEARCH RESULTS & MAP  -->
         <div class="ce-container search-results">
             <div class="programs">
                 <div class="header_line_divider">
                     <span class="header_wrapper">
-                        <h2><strong>Programs</strong> in Oakville, ON<h1>
-                        <!-- <?php echo($city['city']);?> -->
+                        <h2><strong>Programs</strong> in <?php echo($cityToSearch);?>, ON</h2>
                     </span>
                 </div> 
                 <?php foreach($programList as $program): ?>
@@ -67,7 +65,7 @@
                                         <img src="assets/icon_location.svg" alt="location icon">
                                     </i> 
                                     <!-- distance hard-coded -->
-                                    <p>45 m</p>
+                                    45 m
                                 </span>
                             </span>
                             <p class="listEl_container_address" id="address">
