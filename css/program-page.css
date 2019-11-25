@@ -1,0 +1,222 @@
+/*============ Banner ============*/
+.banner {
+    display: inline-block;
+    margin-top: 60px;
+    width: 100vw;
+    height: 200px;
+    background-image: url(../assets/banner.png);
+    background-size: cover;
+    align-items: end;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+/*============ Wrappers ============*/
+.wrapper {
+    margin: 10px 72px 72px 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 450px);
+    grid-gap: 20px;
+    letter-spacing: 1px;
+}
+
+/*============ Program Information ============*/
+.program-info {
+    grid-column-end: span 3;
+    grid-row-end: span 2;
+    width: 100%;
+    height: 100vh;
+    font-size: 12;
+}
+
+.program-info h1 {
+    color: #719450;
+}
+
+.hours {
+    grid-column-end: span 2;
+    /* thought 3/2 would work to reduce the space, 1 is too small and causes an overlap.*/
+    width: 100%;
+}
+
+/*============ Responsive Program Information Tablet ============*/
+@media only screen and (max-width: 992px) {
+    .program-info {
+        grid-column-end: span 12;
+        grid-row-end: span 2;
+        width: 100%;
+    }
+
+    .program-info h1 {
+        color: #719450;
+    }
+
+    .hours {
+        grid-column-end: span 2;
+        width: 100%;
+    }
+}
+
+/*============ Listings ============*/
+.listing {
+    grid-column-end: span 3;
+    grid-row-end: span 1;
+    position: relative;
+    border: solid 1px whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px #c7c7c7;
+}
+
+/*not working?*/
+.listing:hover {
+    background-color: #F9F9F9;
+}
+
+.listing img {
+    width: 100%;
+}
+
+.listing h1 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.listing p {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.addtocart-button {
+    display: flex;
+    justify-content: center;
+}
+
+.addtocart-button input {
+    display: block;
+    color: white;
+    width: 50%;
+    height: 37.6px;
+    background-color: #ed8249;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+/*============Responsive listings for Tablet============*/
+@media only screen and (max-width: 992px) {
+    .wrapper {
+        margin: 10px 72px 72px 50px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+        letter-spacing: 1px;
+    }
+
+    .listing {
+        grid-column-end: span 4;
+        position: relative;
+        border: solid 1px whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px #c7c7c7;
+    }
+
+    .listing img {
+        width: 100%;
+    }
+
+    .listing h1 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .listing p {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .addtocart-button input {
+        display: block;
+        color: white;
+        width: 50%;
+        height: 37.6px;
+        background-color: #ed8249;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.36;
+        letter-spacing: normal;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+/*============Responsive listings for Mobile============*/
+@media only screen and (max-width: 768px) {
+    .wrapper-listings {
+        margin: 10px 72px 72px 50px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 20px;
+        letter-spacing: 1px;
+    }
+
+    .listing {
+        grid-column-end: span 12;
+        position: relative;
+        border: solid 1px whitesmoke;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 2px 2px #c7c7c7;
+    }
+
+    .listing img {
+        width: 100%;
+    }
+
+    .listing h1 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .listing p {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .addtocart-button input {
+        display: block;
+        color: white;
+        width: 50%;
+        height: 37.6px;
+        background-color: #ed8249;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.36;
+        letter-spacing: normal;
+        text-align: center;
+        border: none;
+        border-radius: 5px;
+    }
+}
+
+/* ============ responsive column for mobiles ============  */
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .listing {
+        grid-column-end: span 1;
+    }
+}
