@@ -6,12 +6,9 @@
         <meta charset="utf-8" />
         <meta name="description" content="Log In">
         <meta name="keywords" content="login, campus eats">
-        <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/immfavicon.ico"/> -->
-        <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
-        <!-- <?php include("include/head.php");?> -->
-        <link href="css/login-register.css" rel="stylesheet">
- 
         <?php include("include/head.php");?>
+        <link href="/campus-eats/css/login-register.css" rel="stylesheet">
+        
     </head>
 
     <body>
@@ -20,7 +17,7 @@
         <main>
             <div class="parent"> 
                 <section class="item1">
-                    <img src="assets/white-net.jpg">
+                    <img src="/campus-eats/assets/white-net.jpg">
                 </section>
 
                 <div class="item2">
@@ -32,7 +29,9 @@
 
                     <br>                    
                     
-                    <p class="text">By continuting, you agree to the <a class="subgreytext" target="_blank" href="#">Terms and Conditions</a>.</p>
+                    <div>
+                        <p id="conditions">By continuting, you agree to the <a id="terms" target="_blank" href="#">Terms and Conditions</a>.</p>
+                    </div>
 
                     <!-- <input type="checkbox"> <p>Remember me</p> -->
                     <input id="button" type="submit" value="Login Now">
