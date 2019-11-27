@@ -109,7 +109,7 @@
     margin-bottom: 0.5rem;
 }
 
-.listEl_small_img {
+.listEl_small_img img{
     width: 300px;
     height: 220px;
     object-fit: contain;

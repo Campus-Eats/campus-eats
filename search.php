@@ -1,5 +1,5 @@
 <?php
-    // searchResults.php
+    // search.php
 
     include("include/connect.php");
 
@@ -87,10 +87,15 @@
                                     </i> 
                                 </span>
                                 <p>Canned Goods</p>
-                                <a href="<?php echo("program-details.php?programID=$programID");?>"> 
-                                    <button class="button-small ce-button-secondary">See more
-                                    </button>
-                                </a>
+                            <?php
+                                while($row = $stmt->fetch()) {
+                                    $programID = $row["programID"];
+                                }
+                            ?>
+                                    <a href="<?php echo("program-details.php?programID=$programID");?>"> 
+                                        <button class="button-small ce-button-secondary">See more
+                                        </button>
+                                    </a>
                             </div>
                         </div>
                     </div>
