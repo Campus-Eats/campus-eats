@@ -33,4 +33,29 @@ if (event.target == modal) {
     modal.style.display = "none";
 }
 }
+
+var confirmText = document.getElementById("confirmText");
+confirmText.innerHTML = "Would you like to confirm this pick up item from Sheridan Food First?"
+
+var cancelBtn = document.getElementById("cancelBtn");
+var confirmBtn = document.getElementById("confirmBtn");
+var modal_content = document.getElementsByClassName("modal-content")[0];
+var gohomeBtn = document.createElement("button");
+
+cancelBtn.innerHTML = "Cancel";
+confirmBtn.innerHTML = "Confirm";
+gohomeBtn.innerHTML = "Go back home";
+gohomeBtn.setAttribute("onclick", "window.location.href = 'home.php';");
+
+function processConfirm(e){
+    // console.log("click")
+    confirmText.innerHTML="Thank you for your order! Your confirmation number is #00123. You can pick it up at Sheridan Food First location, during their operation hours.";
+    cancelBtn.remove();
+    confirmBtn.remove();
+    modal_content.appendChild(gohomeBtn);
+}
+
+
+
+
         

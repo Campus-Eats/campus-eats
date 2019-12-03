@@ -79,7 +79,10 @@
             <div id="modal" class="modal"> 
                 <div class="modal-content">
                     <span class="close">&times;</span>
+                    
                     <p id="confirmText"></p>
+                    <button id=cancelBtn></button>
+                    <button id="confirmBtn" onclick="processConfirm()"></button>
                 </div>
             </div>
 

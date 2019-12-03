@@ -94,7 +94,7 @@
     justify-content: center;
 }
 
-.addtocart-button input {
+.addtocart-button button {
     display: block;
     color: white;
     width: 50%;
@@ -193,7 +193,7 @@
         padding: 10px;
     }
 
-    .addtocart-button input {
+    .addtocart-button button {
         display: block;
         color: white;
         width: 50%;
