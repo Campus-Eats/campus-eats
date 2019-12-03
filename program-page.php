@@ -73,6 +73,7 @@
                         <button class="btn" type="submit" >Select</button>
                     </div>                
                 </div> 
+<<<<<<< HEAD
                 <?php }?>
             </div>
 
@@ -82,11 +83,26 @@
                     <p>Some text in the Modal..</p>
                 </div>
             </div>
-
+=======
+                <?php
+                    }
+                ?>
+            
+        </div>
 
     </main>
     <!-- Footer -->
     <?php include("include/footer.php");?>
+
+    <script>
+        function selectPackage() {
+            window.confirm("Thank you for reserving a package!");
+            }
+    </script>
+
+>>>>>>> 694a75f9aae17b89e7655e91c383291abc80c571
+
+
 
     <script src="/campus-eats/js/main.js"></script>
 
