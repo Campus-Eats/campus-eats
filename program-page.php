@@ -68,35 +68,28 @@
                     ?><div class="listing">
                     <img src="assets/vegetarian.png" alt="food image">
                     <h1> <?php echo($row["itemName"]);?> </h1>
-                <p> <?php echo($row["itemType"]);?> </p>
-                <div class="addtocart-button" ><button onclick="selectPackage()" type="submit" >Select</button></div>
+                    <p> <?php echo($row["itemType"]);?> </p>
+                    <div class="addtocart-button" >
+                        <button class="btn" type="submit" >Select</button>
+                    </div>                
                 </div> 
-                <?php
-                    }
-                ?>
-            
-        </div>
+                <?php }?>
+            </div>
+
+            <div id="modal" class="modal"> 
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Some text in the Modal..</p>
+                </div>
+            </div>
+
 
     </main>
     <!-- Footer -->
     <?php include("include/footer.php");?>
 
-    <script>
-        function selectPackage() {
-            window.confirm("Thank you for reserving a package!");
-            }
-    </script>
+    <script src="/campus-eats/js/main.js"></script>
 
-
-</body>
-
-</html>
-
-        </div>
-
-    </main>
-    <!-- Footer -->
-    <?php include("include/footer.php");?>
 
 </body>
 
