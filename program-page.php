@@ -88,15 +88,7 @@
     </script>
 
 
-</body>
 
-</html>
-
-        </div>
-
-    </main>
-    <!-- Footer -->
-    <?php include("include/footer.php");?>
 
 </body>
 
