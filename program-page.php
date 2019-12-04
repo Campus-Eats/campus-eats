@@ -2,6 +2,7 @@
 <?php
     // program-page.php
     include("include/connect.php");
+    include("include/header.php");?>
 ?>
 <html lang="en">
 
@@ -27,9 +28,6 @@
 
 <body>
     <main>
-        <!-- Nav Bar -->
-        <?php include("include/header.php");?>
-
         <!-- Banner -->
         <div class="banner">
 
@@ -61,59 +59,40 @@
             </div>
 
             <!-- Listings -->
-
-            <div class="listing">
-                <img src="assets/standard.png" alt="food image">
                 <?php
         
-                $stmt = $pdo->prepare("SELECT * FROM `fooditems` WHERE `foodID`='1'");
+                $stmt = $pdo->prepare("SELECT * FROM `fooditems`");
                 $stmt->execute();
 
                 while($row = $stmt->fetch()) { 
-                    ?><h1> <?php echo($row["itemName"]);?> </h1>
-                <p> <?php echo($row["itemType"]);?> </p>
-                <?php
-                    }
-                ?>
-                <div class="addtocart-button"><input type="submit" value="Select" /></div>
+                    ?><div class="listing">
+                    <img src="assets/vegetarian.png" alt="food image">
+                    <h1> <?php echo($row["itemName"]);?> </h1>
+                    <p> <?php echo($row["itemType"]);?> </p>
+                    <div class="addtocart-button" >
+                        <button class="btn" type="submit" >Select</button>
+                    </div>                
+                </div> 
+                <?php }?>
             </div>
 
-            <div class="listing">
-                <img src="assets/vegetarian.png" alt="food image">
-                <?php
-        
-                $stmt = $pdo->prepare("SELECT * FROM `fooditems` WHERE `foodID`='2'");
-                $stmt->execute();
-
-                while($row = $stmt->fetch()) { 
-                    ?><h1> <?php echo($row["itemName"]);?> </h1>
-                <p> <?php echo($row["itemType"]);?> </p>
-                <?php
-                    }
-                ?>
-                <div class="addtocart-button"><input type="submit" value="Select" /></div>
+            <div id="modal" class="modal"> 
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    
+                    <p id="confirmText"></p>
+                    <button id=cancelBtn></button>
+                    <button id="confirmBtn" onclick="processConfirm()"></button>
+                </div>
             </div>
 
-            <div class="listing">
-                <img src="assets/standard.png" alt="food image">
-                <?php
-        
-                $stmt = $pdo->prepare("SELECT * FROM `fooditems` WHERE `foodID`='3'");
-                $stmt->execute();
-
-                while($row = $stmt->fetch()) { 
-                    ?><h1> <?php echo($row["itemName"]);?> </h1>
-                <p> <?php echo($row["itemType"]);?> </p>
-                <?php
-                    }
-                ?>
-                <div class="addtocart-button"><input type="submit" value="Select" /></div>
-            </div>
-        </div>
 
     </main>
     <!-- Footer -->
     <?php include("include/footer.php");?>
+
+    <script src="/campus-eats/js/main.js"></script>
+
 
 </body>
 
