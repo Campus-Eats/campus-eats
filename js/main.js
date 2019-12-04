@@ -43,19 +43,17 @@ var modal_content = document.getElementsByClassName("modal-content")[0];
 var gohomeBtn = document.createElement("button");
 
 cancelBtn.innerHTML = "Cancel";
+cancelBtn.setAttribute("onclick", "window.location.href = 'program-page.php';");
 confirmBtn.innerHTML = "Confirm";
 gohomeBtn.innerHTML = "Go back home";
 gohomeBtn.setAttribute("onclick", "window.location.href = 'home.php';");
+gohomeBtn.setAttribute("id", "gohomeBtn");
+
 
 function processConfirm(e){
     // console.log("click")
-    confirmText.innerHTML="Thank you for your order! Your confirmation number is #00123. You can pick it up at Sheridan Food First location, during their operation hours.";
+    confirmText.innerHTML="Thank you for your order! Your confirmation number is <strong>#00123</strong>. You can pick it up at Sheridan Food First location, during their operation hours.";
     cancelBtn.remove();
     confirmBtn.remove();
     modal_content.appendChild(gohomeBtn);
 }
-
-
-
-
-        
