@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php
-    session_start();
     // program-page.php
     include("include/connect.php");
     include("include/header.php");?>
@@ -43,7 +42,7 @@
                         $stmt->execute();
                         while($row = $stmt->fetch()) { 
                             ?>
-                    <p> <?php echo($row["streetAddress"]);?> </p>
+                    <p> <?php echo($row["address"]);?> </p>
                 </div>
                 <div class="hours">
                     <h1>Hours</h1>

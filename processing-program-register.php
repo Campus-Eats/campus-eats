@@ -2,25 +2,28 @@
 session_start();
 
 $programName = $_POST['programName'];
+$description = $_POST['description'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$streetAddress = $_POST['streetAddress'];
+$address = $_POST['address'];
+$addressDetails = $_POST['addressDetails'];
 $city = $_POST['city'];
 $phone = $_POST['phone'];
 $hours = $_POST['hours'];
-$filename = $_FILES['image']['name'];
+$uploaddir = 'assets/';
+$image = $uploaddir.basename($_FILES['image']['name']);
+
+echo($image);
 
 include("include/connect.php");
 
-$uploadF = '../images/';
-$uploadfile = $uploadF . basename($filename);
+$stmt = $pdo->prepare("INSERT INTO `foodprograms` ( `programName`, `description`, `email`, `password`, `address`, `addressDetails`, `city`, `phone`, `hours`, `image`) VALUES ('$programName', :description, '$email', '$password', :address, :addressDetails, '$city', :phone, :hours, :image)");
 
-if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
-    echo "File is valid, and was successfully uploaded.\n";
-} else {
-    echo "Possible image file missing!\n";
-};
+$stmt->execute(array(':description' => $description, ':address' => $address, ':addressDetails' => $addressDetails, ':phone' => $phone, ':hours' => $hours, ':image' => $image));
 
-header("Location:login.php");
+// echo('{"success":"true"}');
+
+var_dump($stmt);
+// header("Location:login.php");
 
 ?>
