@@ -1,4 +1,6 @@
 <?php
+session_start();
+
     // search.php
 
     include("include/connect.php");
