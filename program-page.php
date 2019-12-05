@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+    session_start();
     // program-page.php
     include("include/connect.php");
     include("include/header.php");?>
