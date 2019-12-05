@@ -7,10 +7,18 @@
     $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `city` LIKE '%$cityToSearch%'");
     $stmt->execute();
 
+    // $programIdtoFetch = $_GET["programID"];
+	// $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID` = '$programIdtoFetch'");
+	// $stmt->execute();
+	// $row = $stmt->fetch();
+
+    $cityImage;
     $programList = array();
     while($row = $stmt->fetch()) {
         $programList[] = $row;
+        $cityImage = strtolower($row["city"]); //strtolower() function
     }
+    echo($cityImage);
 ?>
 
 <!DOCTYPE html>
@@ -47,13 +55,10 @@
                 <div class="listEl_container">
                     <div class="listEl_full_content_container">
                         <div class="listEl_small_img">
-                            <!-- PHP IMAGE TO BE COMPLETED -->
-                            <!-- <?php
-                                    $imagePath = $row["image"];
-                                    echo("<img src='$imagePath'>");
-                                ?> -->
-                            <!-- TEMP STATIC IMG -->
-                            <img src="assets/img_good_food.png" alt="image placeholder">
+                            <?php
+                                $imagePath = $row["image"];
+                                echo("<img src='$imagePath'>");
+                            ?>
                         </div>
                         <div class="listEl_content_container">
                             <span class="listEl_header_top_wrapper">
@@ -92,10 +97,11 @@
                                     $programID = $row["programID"];
                                 }
                             ?>
-                                    <a href="<?php echo("program-details.php?programID=$programID");?>"> 
-                                        <button class="button-small ce-button-secondary">See more
-                                        </button>
-                                    </a>
+                                <!-- <a href="<?php echo("/campus-eats/program-page.php?programId=$programIdtoFetch");?>">  -->
+                                <a href="<?php echo("/campus-eats/program-page.php");?>"> 
+                                    <button class="button-small ce-button-secondary">See more
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -106,7 +112,7 @@
                 <div class="header_line_divider">
                     <h2>Map</h2>
                 </div> 
-                <img src="assets/img_map_oakville.svg" alt="google maps image placeholder oakville"> 
+                <img src="<?php echo("/campus-eats/assets/$cityImage");?>.png" alt="google maps image for city "> 
             </div>
         </div>
 

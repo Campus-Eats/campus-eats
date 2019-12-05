@@ -65,6 +65,7 @@
     background-color: #ffffff;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     
 }
 .listEl_full_content_container {
@@ -109,11 +110,16 @@
     margin-bottom: 0.5rem;
 }
 
-.listEl_small_img img{
-    width: 300px;
+.listEl_small_img {
+    width: 400px;
     height: 220px;
     object-fit: contain;
     float: left;
+}
+
+.listEl_small_img img {
+    width: 100%;
+    height: 100%;
 }
 
 .listEl_content_container .bottom_content_holder {
@@ -131,10 +137,7 @@
 }
 
 .listEl_container:hover {
-    transform: scale(1.01);
-    box-shadow: 0 1.5px 4px 0 rgba(0, 0, 0, 0.16);
-    transition-timing-function: ease-out;
-    transition: 0.25s;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.01), 0 0px 24px rgba(0,0,0,0.22);
 }
 
 /* ================ MAP ================ */

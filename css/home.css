@@ -27,8 +27,7 @@ form.searchbar input[type=text] {
     border-radius: 3px;
     border: solid 0.5px rgba(149, 152, 154, 0.3);
     margin-top: 20px;
-
-    background: url(assets/search.svg) 4% center no-repeat;
+    background: url(../assets/search.svg) 4% center no-repeat;
     padding-left: 60px;
     background-color: #fcfcfc;
 }
