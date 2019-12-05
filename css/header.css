@@ -32,6 +32,10 @@ nav {
     float: right;
 }
 
+#toggle{
+    display:none;
+}
+
 /* ====== RESPONSIVE FOR MOBILE/TABLET ====== */
 @media only screen and (max-width: 768px) {
     .hamburger-menu  {
@@ -40,22 +44,22 @@ nav {
     .nav-list {
         display: none;
     }
-}
-/*
-.nav-icon1 img{
-	max-width: 24px;
-	float: none;
-  	position: center;
-	top: 20px;
-  	left: 84%;
-}
 
-.nav-icon2 img{
-	max-width: 24px;
-	transform: translate(-50%, -50%);
-	float: none;
-  	position: center;
-	top: 20px;
-  	left: 87%;
+    .hamburger-menu>label{
+        cursor:pointer;
+    }
+
+    #hamMenu{
+        position: fixed;
+        transform: translate(-200px,20px);
+        background-color:white;
+        width:300px;
+        height:150px;
+        text-align: center;
+
+    }
+
+    #hamMenu>li{
+        list-style: none;
+    }
 }
-*/
