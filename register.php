@@ -20,9 +20,10 @@
                     <img src="assets/white-net.jpg">
                 </section>
 
-                <div class="item2">
+                <div class="item2">                        
+                    <h1 id="welcome">Register</h1>
+                    <p id="programText">If you are a Food Program looking to join Campus Eats, <a id="terms" href="program-register.php">click here.</a></p>
                     <form action="processing-register.php" method="POST"><br>
-                        <h1 id="welcome">Register</h1>
                         <div class="namefield">
                         <p>First Name</p><input class="nametexts" name="firstname" type="text" required />
                         </div>

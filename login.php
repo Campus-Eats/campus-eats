@@ -23,7 +23,7 @@
                 <div class="item2">
                     <form action="processing-login.php" method="POST">
                     <h1 id="welcome">Welcome</h1>
-                    <p class="subgreytext">Not a member yet? <a href="register.php" id="blacktext">Sign up now</a></p>
+                    <p id="blacktext">Not a member yet? <a href="register.php" class="subgreytext">Sign up now</a></p>
                     <p class="text">Email address</p> <input class="textfield" name="email" type="email" required />
                     <p class="text">Password</p> <input class="textfield" name="password" type="password" required />
 
