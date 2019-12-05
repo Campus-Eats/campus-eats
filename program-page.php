@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+    session_start();
     // program-page.php
     include("include/connect.php");
     include("include/header.php");?>
@@ -66,7 +67,7 @@
 
                 while($row = $stmt->fetch()) { 
                     ?><div class="listing">
-                    <img src="assets/vegetarian.png" alt="food image">
+                    <img src=<?php echo($row["itemImage"]);?> alt="food image">
                     <h1> <?php echo($row["itemName"]);?> </h1>
                     <p> <?php echo($row["itemType"]);?> </p>
                     <div class="addtocart-button" >

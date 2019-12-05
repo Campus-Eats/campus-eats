@@ -12,8 +12,8 @@ $stmt = $pdo->prepare("INSERT INTO `users` (`userID`, `firstname`, `lastname`, `
 
 $stmt->execute();
 
+// header("Location:login.php");
 
-
-
+echo('{"success":"true"}');
 
 ?>

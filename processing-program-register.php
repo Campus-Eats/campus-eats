@@ -21,14 +21,6 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
     echo "Possible image file missing!\n";
 };
 
-$fullImagePath = "/campus-eats/images/" . $filename;
-
-
-$stmt = $pdo->prepare("INSERT INTO 
-    `foodprograms` (`programID`, `programName`, `email`, `password`,`streetAddress`, `city`, `phone`, `hours`, `image`) 
-    VALUES (NULL, '$programName', '$email', '$password', :streetAddress, '$city', :phone, :hours, '$fullImagePath')
-    ");
-
-$stmt->execute(array(':hours' => $hours, ':phone' => $phone, ':streetAddress' => $streetAddress));
+header("Location:login.php");
 
 ?>
