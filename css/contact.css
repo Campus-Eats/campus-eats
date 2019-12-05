@@ -1,0 +1,59 @@
+body{
+    height:100vh;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    border-radius: 2.5px;
+    border: solid 0.5px rgba(149, 152, 154, 0.3);
+    background-color: #fcfcfc;
+}
+
+#messageInput{
+    width: 300px;
+    height: 100px;
+
+}
+
+#contactForm{
+    text-align:center;
+}
+
+#contactForm form{
+    margin:auto;
+}
+
+p {
+    text-align:left;
+    position:relative;
+    left:260px;
+    margin-top:20px;
+}
+
+h2{
+    text-align:center;
+    margin:5%;
+}
+
+h3{
+    text-align:center;
+    margin:5%;
+    height:350px;
+}
+
+#submitContact{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: solid 1px #f88325;
+    font-size: 16px;
+    color: #f88325;
+    margin:5%;
+}
+
+#submitContact:hover{
+    background-color: #E37630;
+    color: #fff;
+}

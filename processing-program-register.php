@@ -15,8 +15,6 @@ $stmt = $pdo->prepare("INSERT INTO `foodprograms` (`programID`, `programName`, `
 
 $stmt->execute(array(':hours' => $hours, ':phone' => $phone, ':streetAddress' => $streetAddress));
 
-
-
-
+header("Location:login.php");
 
 ?>
