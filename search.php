@@ -20,7 +20,7 @@ session_start();
         $programList[] = $row;
         $cityImage = strtolower($row["city"]); //strtolower() function
     }
-    echo($cityImage);
+    // echo($cityImage);
 ?>
 
 <!DOCTYPE html>
@@ -57,10 +57,7 @@ session_start();
                 <div class="listEl_container">
                     <div class="listEl_full_content_container">
                         <div class="listEl_small_img">
-                            <?php
-                                $imagePath = $row["image"];
-                                echo("<img src='$imagePath'>");
-                            ?>
+                            <img src= <?php echo($program["image"]);?> alt="food image">
                         </div>
                         <div class="listEl_content_container">
                             <span class="listEl_header_top_wrapper">
