@@ -1,27 +1,31 @@
-<?php
+<?php session_start();
 
-    // include("includes/isAdmin.php");
+    // include("include/isAdmin.php");
     include("include/connect.php");
 
     // if($isAdmin) {
-    //     // Add an article
-    //     // initialize article form data 
-    //     $programData = array(
-    //         "programName" => "",
-    //         "address" => "",
-    //         "description" => "",
-    //         "city" => "",
-    //         "phone" => "",
-    //         "hours" => "",
-    //         "image" => ""
-    //     );
+        // initialize program form data 
+        $programData = array(
+            "programName" => "",
+            "password" => "",
+            "email" => "",
+            "description" => "",
+            "address" => "",
+            "addressDetails" => "",
+            "city" => "",
+            "phone" => "",
+            "hours" => "",
+            "image" => ""
+        );
 
-    //     // fetch article by id if provided in URL and override article form data
-    //     if(isset($_GET["programID"])) {
+        // fetch program by id if provided in URL and override program form data
+        if(isset($_GET["programID"])) {
 
-            // fetch article
+            // fetch program via programID
             $id = $_GET["programID"];
-            $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID` = '$programID';");
+            // $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID` = '$programID';");
+            // hard-coded atm
+            $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID`='11'");
             $stmt->execute();
             $row = $stmt->fetch();
 
@@ -34,101 +38,107 @@
             $programData['hours'] = $row['hours'];
             $programData['image'] = $row['image'];
             
-            // change form action to call update article
+            // program form/ dashboard is handled by updateProgram.php and is
+            // assigned to $programFormAction
             $programFormAction = "handlers/updateProgram.php?programID=$programID";
             // Edit Program details page header as a literal string; is changeable
             $pageHeader = "Edit Program Details";
-        // }
-//     } else {
-//         header("Location:/campus-eats/search.php");
-//     }
-// ?>
+        }
+    // } else {
+    //     header("Location:/campus-eats/search.php");
+    // }
+?>
 
 <!DOCTYPE html>
     <html lang="en">
     <head>
-        <?php include("includes/head.php");?>
         <title>Program Form</title>
+        <?php include("include/head.php");?>
+        <link rel="stylesheet" type="text/css" href="css/program-form.css">
     </head>
 
     <body>
-        <?php include("includes/header.php"); ?> 	
+        <?php include("include/header.php"); ?> 	
     	<main>
-            <h1><?php echo $pageHeader ?></h1>
-            <form
-                action="<?php echo $programFormAction?>"
-                method="POST"
-                enctype="multipart/form-data"
-            >  
-                <h1 id="welcome">Program Register</h1>
-                <label for="programName">Program Name: </label>
-                <input 
-                    class="textfield" 
-                    name="programName" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['programName']);?>"/>
-                <label for="email">Email: </label>
-                <input 
-                    class="textfield" 
-                    name="email" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['email']);?>"/>
-                <label for="password">Password: </label>
-                <input 
-                    class="textfield" 
-                    name="password" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['password']);?>"/>
-                <label for="description">Description: </label>
-                <input 
-                    class="textfield" 
-                    name="description" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['description']);?>"/>
-                <label for="address">Street Address: </label>
-                <input 
-                    class="textfield" 
-                    name="address" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['address']);?>"/>
-                <label for="addressDetails">Location on campus: </label>
-                <input 
-                    class="textfield" 
-                    name="description" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['addressDetails']);?>"/>
-                <label for="email">City: </label>
-                <input 
-                    class="textfield" 
-                    name="city" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['city']);?>"/>
-                <label for="phone">Phone: </label>
-                <input 
-                    class="textfield" 
-                    name="phone" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['phone']);?>"/>
-                <label for="hours">Hours: </label>
-                <input 
-                    class="textfield" 
-                    name="email" 
-                    type="text" 
-                    required 
-                    value="<?php echo($programData['hours']);?>"/>
-                <label for="image"><h3>Upload an image:</h3> </label>
-                <input id="image" name="image" type="file" value="image"/> 
-                <input type="submit" name="upload_image" value="Submit">
-            </form>
+            <div class="ce-container">
+            <h3 id="welcome">Program Register</h3>
+                <form
+                    class="form__container"
+                    action="<?php echo $programFormAction?>"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >  
+                    
+                    <br>
+                    <label for="programName">Program Name: </label>
+                    <input 
+                        class="textfield" 
+                        name="programName" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['programName']);?>"/>
+                    <label for="email">Email: </label>
+                    <input 
+                        class="textfield" 
+                        name="email" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['email']);?>"/>
+                    <label for="password">Password: </label>
+                    <input 
+                        class="textfield" 
+                        name="password" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['password']);?>"/>
+                    <label for="description">Description: </label>
+                    <input 
+                        class="textfield" 
+                        name="description" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['description']);?>"/>
+                    <label for="address">Street Address: </label>
+                    <input 
+                        class="textfield" 
+                        name="address" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['address']);?>"/>
+                    <label for="addressDetails">Location on campus: </label>
+                    <input 
+                        class="textfield" 
+                        name="description" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['addressDetails']);?>"/>
+                    <label for="email">City: </label>
+                    <input 
+                        class="textfield" 
+                        name="city" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['city']);?>"/>
+                    <label for="phone">Phone: </label>
+                    <input 
+                        class="textfield" 
+                        name="phone" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['phone']);?>"/>
+                    <label for="hours">Hours: </label>
+                    <input 
+                        class="textfield" 
+                        name="email" 
+                        type="text" 
+                        required 
+                        value="<?php echo($programData['hours']);?>"/>
+                    <label for="image"><h4>Upload an image:</h4> </label>
+                    <input id="image" name="image" type="file" value="image"/> 
+                    <input type="submit" name="upload_image" value="Submit" class="ce-button ce-button-primary">
+                </form>
+            </div>
 		</main>
-		<?php include("includes/footer.php"); ?> 
+		<?php include("include/footer.php"); ?> 
     </body>
 </html/>

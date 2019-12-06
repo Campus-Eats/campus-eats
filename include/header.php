@@ -1,5 +1,5 @@
 <header>
-    <nav class="ce-container">
+    <nav class="ce-container-nav">
         <a href="/campus-eats/home.php"><img src="/campus-eats/assets/logo.svg"></a>
         <div class="nav-menu">
             <ul class="nav-list">

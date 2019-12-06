@@ -14,6 +14,15 @@ nav {
     align-items: center;
 }
 
+.ce-container-nav {
+    max-width: calc(1280px + 4rem);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 .nav-menu {
     margin-left: auto;
 }
