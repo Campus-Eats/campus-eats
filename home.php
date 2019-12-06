@@ -15,78 +15,83 @@
 
 <body>
     <main>
-    <!-- <!–––––––– Nav Bar ––––––––> -->
-    <!-- <div class="nav">
-        <label for="toggle">&#9776;</label>
-        <input type="checkbox" id="toggle" />
-        <div class="menu">
-            <div class="logo">
-                <a href="/campus-eats/home.php"><img src="/campus-eats/assets/logo.svg">
-            </div>
-                
-            <div class="nav-icon1" alt="">
-                <a href="profile.html"><img src="assets/user.svg" alt="black user icon"></a>
-            </div>
-            <div class="nav-icon2" alt="">
-                <a href="shoppingcart.html" class=nav-icon2><img src="assets/shopping-cart.svg" alt="black small shopping bag"></a>
-            </div>
-            <a class="nav-items" href="#">About</a>
-            <a class="nav-items" href="#">Contact</a>
-        </div>
-    </div> -->
-
         <!-- <!–––––––– Hero Section ––––––––> -->
-        <div class="hero">
-            <div id=cta>
-                Fill Your Fridge with Healthy and Affordable Options.
-            </div>
-            <div class="search-container">
-                <form class="searchbar" action="./handlers/searchResults.php" method="POST">
-                    <input type="text" placeholder="Enter Your Location" name="search">
-                    <button type="submit">Find Food</button>
-                </form>
-            </div>
+         <div class="slideshow-container">
 
-        </div>
+                <div class="slideshow-content">
+
+                    <div id=cta>
+                        Fill Your Fridge with Healthy and Affordable Options.
+                    </div>
+                    <div class="search-container">
+                        <form class="searchbar" action="./handlers/searchResults.php" method=“POST”>
+                            <input type="text" placeholder="Enter Your Location" name="search">
+                            <button type="submit" id="cta-button">Find Food</button>
+                        </form>
+                    </div>
+
+                </div>
+
+
+                <div class="mySlides fade">
+                    <img src="assets/hero1.png" class="hero-img" width ='100%' >
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/hero2.png" class="hero-img" width ='100%'>
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets/hero3.png" class="hero-img" width ='100%'>
+                </div>
+
+
+
+            </div>
+    
+    <script src="js/home.js"></script>
+
 
                 <!-- <!–––––––– how it works––––––––> -->
-        <h2 class="title">How it Works</h2>
-            <div class="grid-12-col">
-                <div class="six">
-                    <div class="six-img">
-                        <img src="assets/1.png" alt="">
-                    </div>
-                </div>
-                <div class="six">
-                    <div class="paragraph">
-                        <h3>Find a Food Program</h3>
-                        <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
-                    </div>
-                </div>
-                <div class="six">
-                    <div class="paragraph">
-                        <h3>Find a Food Program</h3>
-                        <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
-                    </div>
-                </div>
-                <div class="six">
-                    <div class="six-img">
+                  <h2 class="title">How it Works</h2>
+                <div class="grid-12-col" id="main">
 
-                        <img src="assets/1.png" alt="">
+                    <div class="six" id="s1">
+                        <div class="six-img">
+                            <img src="assets/step1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="six" id="s2">
+                        <div class="paragraph">
+                            <h3>Find a Food Program</h3>
+                            <p>Search for food programs based on your location, then filter by your preferences. Choose
+                                your desired food program. </p>
+                        </div>
+                    </div>
+                    <div class="six" id="s3">
+                        <div class="paragraph">
+                            <h3>Choose and Order</h3>
+                            <p>Pick up your food at its designated pick-up location. Some programs deliver! We’ll let you know which ones do.</p>
+                        </div>
+                    </div>
+                    <div class="six" id="s4">
+                        <div class="six-img">
+
+                            <img src="assets/step2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="six" id="s5">
+                        <div class="six-img">
+                            <img src="assets/step3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="six" id="s6">
+                        <div class="paragraph">
+                            <h3>Find a Food Program</h3>
+                            <p>Search for food programs based on your location, then filter by your preferences. Choose
+                                your desired food program. </p>
+                        </div>
                     </div>
                 </div>
-                <div class="six">
-                    <div class="six-img">
-                        <img src="assets/1.png" alt="">
-                    </div>
-                </div>
-                <div class="six">
-                    <div class="paragraph">
-                        <h3>Find a Food Program</h3>
-                        <p>Search for food programs based on your location, then filter by your preferences. Choose your desired food program. </p>
-                    </div>
-                </div>
-            </div>
+
 
         <!--REGISTER SECTION-->
         <div class="register">
