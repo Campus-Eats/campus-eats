@@ -1,0 +1,37 @@
+/*============ Main ============*/
+.wrapper {
+    margin: 10px 150px 72px 150px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    letter-spacing: 1px;
+}
+
+/*============ Form Elements ============*/
+form div { 
+    padding-bottom: 20px;
+}
+
+input {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+}
+
+#submitBtn {
+    display: inline-block;
+    color: white;
+    width: 80px;
+    height: 37.6px;
+    background-color: #ed8249;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
