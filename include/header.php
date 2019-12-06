@@ -11,27 +11,21 @@
                 <li><a href="login.php">LogIn</a></li>
             </ul>
             <div class="hamburger-menu">
-                <label for="toggle">&#9776;</label>
-                <input type="checkbox" id="toggle" />
+                <label for="toggle" onclick="showHam()">&#9776;</label>
+                <section id="hamMenu">
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <!-- <li><a href="search.php">Search</a></li> -->
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="register.php">Register</a></li>
+                    <li><a href="login.php">LogIn</a></li> 
+                </section>
+                <!-- <input type="checkbox" id="toggle" /> -->
             </div>
         </div>
     </nav>
 </header>
 
-<!-- POTENTIAL NAV TOGGLE HAMBURER MENU -->
-<!-- <nav role="nav">
-    <div id="nav-toggle-bar">
-        <input type="checkbox"/>
-        <span></span>
-        <span></span>
-        <span></span>
-            <ul id="nav-menu">
-                <li><a href="home.php">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="about.html">Search</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="Register.html">Register</a></li>
-                <li><a href="LogIn.html">LogIn</a></li>
-            </ul>
-    </div>
-</nav> -->
+<script src="/campus-eats/js/header.js"></script>
+
+
