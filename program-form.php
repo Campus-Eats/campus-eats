@@ -59,7 +59,7 @@
 
     <body>
         <?php include("include/header.php"); ?> 	
-    	<main>
+    <main>
             <div class="ce-container">
             <h3 id="welcome">Program Register</h3>
                 <form
