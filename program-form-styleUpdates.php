@@ -47,11 +47,9 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
-        <?php include("includes/head.php");?>
+        <?php include("include/head.php");?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/main.css" rel="stylesheet" type="text/css">
-        <link href="css/header.css" rel="stylesheet" type="text/css">
         <link href="css/program-form.css" rel="stylesheet" type="text/css">
         <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> -->
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
@@ -59,7 +57,7 @@
     </head>
 
     <body>
-        <?php include("includes/header.php"); ?> 	
+        <?php include("include/header.php"); ?> 	
     	<main class="wrapper">
             <h1><?php echo $pageHeader ?></h1>
             <form
@@ -156,6 +154,6 @@
                 <input id="submitBtn" type="submit" name="upload_image" value="Submit">
             </form>
 		</main>
-		<?php include("includes/footer.php"); ?> 
+		<?php include("include/footer.php"); ?> 
     </body>
 </html/>

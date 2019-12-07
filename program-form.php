@@ -59,84 +59,101 @@
 
     <body>
         <?php include("include/header.php"); ?> 	
-    	<main>
-            <div class="ce-container">
+    	<main class="ce-container">
+            <div class="wrapper">
             <h3 id="welcome">Program Register</h3>
-                <form
-                    class="form__container"
-                    action="<?php echo $programFormAction?>"
-                    method="POST"
-                    enctype="multipart/form-data"
-                >  
-                    
-                    <br>
-                    <label for="programName">Program Name: </label>
+            <form
+                action="<?php echo $programFormAction?>"
+                method="POST"
+                enctype="multipart/form-data"
+            >  
+                <div>
+                    <label for="programName">Program Name: </label><br>
                     <input 
                         class="textfield" 
                         name="programName" 
                         type="text" 
                         required 
                         value="<?php echo($programData['programName']);?>"/>
-                    <label for="email">Email: </label>
+                </div>
+                <div>
+                    <label for="email">Email: </label><br>
                     <input 
                         class="textfield" 
                         name="email" 
                         type="text" 
                         required 
                         value="<?php echo($programData['email']);?>"/>
-                    <label for="password">Password: </label>
+                </div>
+                <div>
+                    <label for="password">Password: </label><br>
                     <input 
                         class="textfield" 
                         name="password" 
                         type="text" 
                         required 
                         value="<?php echo($programData['password']);?>"/>
-                    <label for="description">Description: </label>
-                    <input 
+                </div>
+                <div>
+                    <label for="description">Description: </label><br>
+                    <textarea
                         class="textfield" 
                         name="description" 
                         type="text" 
                         required 
-                        value="<?php echo($programData['description']);?>"/>
-                    <label for="address">Street Address: </label>
+                        value="<?php echo($programData['description']);?>"></textarea>
+                </div>
+                <div>
+                    <label for="address">Street Address: </label><br>
                     <input 
                         class="textfield" 
                         name="address" 
                         type="text" 
                         required 
                         value="<?php echo($programData['address']);?>"/>
-                    <label for="addressDetails">Location on campus: </label>
-                    <input 
+                </div>
+                <div>
+                    <label for="addressDetails">Location on campus: </label><br>
+                    <textarea 
                         class="textfield" 
                         name="description" 
                         type="text" 
                         required 
-                        value="<?php echo($programData['addressDetails']);?>"/>
-                    <label for="email">City: </label>
+                        value="<?php echo($programData['addressDetails']);?>"></textarea>
+                </div>
+                <div>
+                    <label for="email">City: </label><br>
                     <input 
                         class="textfield" 
                         name="city" 
                         type="text" 
                         required 
                         value="<?php echo($programData['city']);?>"/>
-                    <label for="phone">Phone: </label>
+                </div>
+                <div>
+                    <label for="phone">Phone: </label><br>
                     <input 
                         class="textfield" 
                         name="phone" 
                         type="text" 
                         required 
                         value="<?php echo($programData['phone']);?>"/>
-                    <label for="hours">Hours: </label>
+                </div>
+                <div>
+                    <label for="hours">Hours: </label><br>
                     <input 
                         class="textfield" 
                         name="email" 
                         type="text" 
                         required 
                         value="<?php echo($programData['hours']);?>"/>
-                    <label for="image"><h4>Upload an image:</h4> </label>
-                    <input id="image" name="image" type="file" value="image"/> 
-                    <input type="submit" name="upload_image" value="Submit" class="ce-button ce-button-primary">
-                </form>
+                </div>
+                <div>
+                    <label for="image"><h3>Upload an image:</h3> </label>
+                    <input id="image" name="image" type="file" value="image"/><br>
+                </div>
+                <input id="submitBtn" type="submit" name="upload_image" value="Submit">
+            </form>
             </div>
 		</main>
 		<?php include("include/footer.php"); ?> 
