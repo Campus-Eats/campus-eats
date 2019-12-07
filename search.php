@@ -5,6 +5,9 @@ session_start();
 
     include("include/connect.php");
 
+    // Hide undefined index error
+    error_reporting(E_ALL ^ E_NOTICE);
+
     $cityToSearch = $_GET["city"];
     $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `city` LIKE '%$cityToSearch%'");
     $stmt->execute();
