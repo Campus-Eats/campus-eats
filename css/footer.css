@@ -51,3 +51,10 @@ footer ul {
     letter-spacing: 2px;
 }
 
+
+ @media only screen and (max-width: 480px) {
+        footer {
+            grid-template-columns: 1fr;
+        }
+        
+    }
