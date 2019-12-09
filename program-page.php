@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
+    session_start();
     // program-page.php
     include("include/connect.php");
-    include("include/header.php");
 
     $programID = $_GET['programID'];
 
@@ -36,6 +36,7 @@
 </head>
 
 <body>
+    <?php include("include/header.php");?>
     <main>
         <!-- Banner -->
         <div class="banner">
