@@ -7,20 +7,26 @@
                 <li><a href="about.php">About</a></li>
                 <!-- <li><a href="search.php">Search</a></li> -->
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="register.php">Register</a></li>
-
-                <?php 
-                if(! isset($_SESSION['userID']) || ! isset($_SESSION['programID'])) { ?>
-                    <li><a href="/campus-eats/login.php">LogIn</a></li>
+                <?php
+                if(isset($_SESSION['programID'])){ ?>
+                <li><a href="program-form-styleUpdates.php">Manage Program</a></li>
                 <?php
                 };
+                ?>
 
+                <li><a href="register.php">Register</a></li>
+                
+                <?php 
                 if(isset($_SESSION['userID']) || isset($_SESSION['programID'])){
                 ?>
                     <li><a href="/campus-eats/logout.php">LogOut</a></li>
                 <?php 
+                }else{ ?>
+                    <li><a href="/campus-eats/login.php">LogIn</a></li>
+                <?php
                 };
                 ?>
+                
             </ul>
 
 
