@@ -16,6 +16,7 @@
                     <?php if ($isAdmin): ?>
                         <li><a href="my-programs.php">My Program</a></li>
                     <?php endif; ?>
+                    <li><a href="/campus-eats/handlers/logout.php">Logout</a></li>
                 <?php endif; ?>
                 <?php if (!$isLoggedIn): ?>
                     <li><a href="login.php">LogIn</a></li>
@@ -33,6 +34,7 @@
                         <?php if ($isAdmin): ?>
                             <li><a href="register.php">My Programs</a></li>
                         <?php endif; ?>
+                        <li><a href="/campus-eats/handlers/logout.php">Logout</a></li>
                     <?php endif; ?>
                     <?php if (!$isLoggedIn): ?>
                         <li><a href="login.php">LogIn</a></li>
