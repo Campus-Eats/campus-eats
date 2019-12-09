@@ -12,7 +12,12 @@ $stmt->execute();
 
 $row = $stmt->fetch();
 
-if ($row['email']==$email && $row['password']==$password){
+if ($row){
+    //lset session variables
+    $_SESSION['id'] = $row['userID'];
+    if($row['role'] == 'admin') {
+        $_SESSION['isAdmin'] = true;
+    };
     header("Location:home.php");
 }else{
     echo("Please try again.");
