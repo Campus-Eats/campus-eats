@@ -1,5 +1,10 @@
 <?php 
-session_start();
+    session_start();
+    include("include/isLoggedIn.php");
+
+    if($isLoggedIn) {
+        header("Location:/campus-eats/home.php");
+    }
 ?>
 <!DOCTYPE html>
 <html>

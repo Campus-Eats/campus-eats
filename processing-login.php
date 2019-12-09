@@ -12,12 +12,14 @@ $stmt->execute();
 
 $row = $stmt->fetch();
 
+//found user
 if ($row){
-    //lset session variables
+    //set session variables
     $_SESSION['id'] = $row['userID'];
     if($row['role'] == 'admin') {
         $_SESSION['isAdmin'] = true;
     };
+    //redirect to homepage
     header("Location:home.php");
 }else{
     echo("Please try again.");
