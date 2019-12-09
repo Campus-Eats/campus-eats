@@ -1,58 +1,28 @@
 <?php session_start();
 
-    // include("include/isAdmin.php");
+    include("include/isAdmin.php");
     include("include/connect.php");
 
-    // if($isAdmin) {
-        // initialize program form data 
-        $programData = array(
-            "programName" => "",
-            "password" => "",
-            "email" => "",
-            "description" => "",
-            "address" => "",
-            "addressDetails" => "",
-            "city" => "",
-            "phone" => "",
-            "hours" => "",
-            "image" => ""
-        );
+    if($isAdmin) {
 
-        // fetch program by id if provided in URL and override program form data
-        if(isset($_GET["programID"])) {
 
-            // fetch program via programID
-            $id = $_GET["programID"];
-            // $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID` = '$programID';");
-            // hard-coded atm
-            $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID`='11'");
-            $stmt->execute();
-            $row = $stmt->fetch();
+        $userID = $_SESSION['id']; //2
 
-            // overridering default with the fetched program details data
-            $programData['programName'] = $row['programName'];
-            $programData['address'] = $row['address'];
-            $programData['description'] = $row['description'];
-            $programData['city'] = $row['city'];
-            $programData['phone'] = $row['phone'];
-            $programData['hours'] = $row['hours'];
-            $programData['image'] = $row['image'];
-            
-            // program form/ dashboard is handled by updateProgram.php and is
-            // assigned to $programFormAction
-            $programFormAction = "handlers/updateProgram.php?programID=$programID";
-            // Edit Program details page header as a literal string; is changeable
-            $pageHeader = "Edit Program Details";
+        $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `userID` = '$userID' ");
+        $stmt->execute();
+        $programData = $stmt->fetch();
+        $programID = $programData['programID'];
+
+        if(!$programData) {
+            header("Location:/campus-eats/home.php");
         }
-    // } else {
-    //     header("Location:/campus-eats/search.php");
-    // }
+    }
 ?>
 
 <!DOCTYPE html>
     <html lang="en">
     <head>
-        <title>Program Form</title>
+        <title>Update Program</title>
         <?php include("include/head.php");?>
         <link rel="stylesheet" type="text/css" href="css/program-form.css">
     </head>
@@ -63,7 +33,7 @@
             <div class="wrapper">
             <h3 id="welcome">Program Register</h3>
             <form
-                action="<?php echo $programFormAction?>"
+                action=<?php echo"handlers/updateProgram.php?programID=$programID"?>
                 method="POST"
                 enctype="multipart/form-data"
             >  
@@ -77,31 +47,15 @@
                         value="<?php echo($programData['programName']);?>"/>
                 </div>
                 <div>
-                    <label for="email">Email: </label><br>
-                    <input 
-                        class="textfield" 
-                        name="email" 
-                        type="text" 
-                        required 
-                        value="<?php echo($programData['email']);?>"/>
-                </div>
-                <div>
-                    <label for="password">Password: </label><br>
-                    <input 
-                        class="textfield" 
-                        name="password" 
-                        type="text" 
-                        required 
-                        value="<?php echo($programData['password']);?>"/>
-                </div>
-                <div>
                     <label for="description">Description: </label><br>
                     <textarea
                         class="textfield" 
                         name="description" 
                         type="text" 
                         required 
-                        value="<?php echo($programData['description']);?>"></textarea>
+                    >
+                    <?php echo($programData['description']);?>
+                </textarea>
                 </div>
                 <div>
                     <label for="address">Street Address: </label><br>
@@ -116,10 +70,12 @@
                     <label for="addressDetails">Location on campus: </label><br>
                     <textarea 
                         class="textfield" 
-                        name="description" 
+                        name="addressDetails" 
                         type="text" 
                         required 
-                        value="<?php echo($programData['addressDetails']);?>"></textarea>
+                    >
+                        <?php echo($programData['addressDetails']);?>
+                    </textarea>
                 </div>
                 <div>
                     <label for="email">City: </label><br>
@@ -143,14 +99,15 @@
                     <label for="hours">Hours: </label><br>
                     <input 
                         class="textfield" 
-                        name="email" 
+                        name="hours" 
                         type="text" 
                         required 
                         value="<?php echo($programData['hours']);?>"/>
                 </div>
                 <div>
                     <label for="image"><h3>Upload an image:</h3> </label>
-                    <input id="image" name="image" type="file" value="image"/><br>
+                    <?php echo $programData['image'] ?>
+                    <input id="image" name="image" type="file" /><br>
                 </div>
                 <input id="submitBtn" type="submit" name="upload_image" value="Submit">
             </form>
