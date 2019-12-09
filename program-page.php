@@ -14,6 +14,10 @@
     $stmt->execute();
     $row = $stmt->fetch();
 
+    $userID = $row["userID"];
+    $userStmt = $pdo->prepare("SELECT * FROM `users` WHERE `userID`=$userID");
+    $userStmt->execute();
+    $user = $userStmt->fetch();
 
 ?>
 <html lang="en">
@@ -39,6 +43,9 @@
         </div>
         <div class="wrapper">
 
+            <?php if ($row['userID'] ==  $_SESSION['id']): ?>
+                <a href="program-form.php">Edit</a>
+            <?php endif; ?>
             <!-- Information -->
             <div class="program-info">
                 <div class="address">
@@ -52,10 +59,11 @@
                 <div class="contact">
                     <h1>Contact</h1>
                     <p> <?php echo($row["phone"]);?> </p>
-                    <p> <?php echo($row["email"]);?> </p>
-                    <?php
-                            }
+                    <p>
+                        <?php
+                            echo($user["email"]);
                         ?>
+                    </p>
                 </div>
             </div>
 
