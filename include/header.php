@@ -19,7 +19,7 @@
                     <li><a href="/campus-eats/handlers/logout.php">Logout</a></li>
                 <?php endif; ?>
                 <?php if (!$isLoggedIn): ?>
-                    <li><a href="login.php">LogIn</a></li>
+                    <li><a href="login.php">Login</a></li>
                     <li><a href="register.php">Signup</a></li>
                 <?php endif; ?>
             </ul>
@@ -39,7 +39,7 @@
                         <li><a href="/campus-eats/handlers/logout.php">Logout</a></li>
                     <?php endif; ?>
                     <?php if (!$isLoggedIn): ?>
-                        <li><a href="login.php">LogIn</a></li>
+                        <li><a href="login.php">Login</a></li>
                         <li><a href="register.php">Signup</a></li>
                     <?php endif; ?>
                 </section>
