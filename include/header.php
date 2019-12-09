@@ -1,3 +1,7 @@
+<?php
+    include("isLoggedIn.php");
+    include("isAdmin.php");
+?>
 <header>
     <nav class="ce-container-nav">
         <a href="/campus-eats/home.php"><img src="/campus-eats/assets/logo.svg"></a>
@@ -7,8 +11,16 @@
                 <li><a href="about.php">About</a></li>
                 <!-- <li><a href="search.php">Search</a></li> -->
                 <li><a href="contact.php">Contact</a></li>
-                <li><a href="register.php">Register</a></li>
-                <li><a href="login.php">LogIn</a></li>
+                <li><a href="search.php">Search</a></li>
+                <?php if ($isLoggedIn): ?>
+                    <?php if ($isAdmin): ?>
+                        <li><a href="my-programs.php">My Program</a></li>
+                    <?php endif; ?>
+                <?php endif; ?>
+                <?php if (!$isLoggedIn): ?>
+                    <li><a href="login.php">LogIn</a></li>
+                    <li><a href="register.php">Signup</a></li>
+                <?php endif; ?>
             </ul>
             <div class="hamburger-menu">
                 <label for="toggle" onclick="showHam()">&#9776;</label>
@@ -17,8 +29,15 @@
                     <li><a href="about.php">About</a></li>
                     <!-- <li><a href="search.php">Search</a></li> -->
                     <li><a href="contact.php">Contact</a></li>
-                    <li><a href="register.php">Register</a></li>
-                    <li><a href="login.php">LogIn</a></li> 
+                    <?php if ($isLoggedIn): ?>
+                        <?php if ($isAdmin): ?>
+                            <li><a href="register.php">My Programs</a></li>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                    <?php if (!$isLoggedIn): ?>
+                        <li><a href="login.php">LogIn</a></li>
+                        <li><a href="register.php">Signup</a></li>
+                    <?php endif; ?>
                 </section>
                 <!-- <input type="checkbox" id="toggle" /> -->
             </div>
@@ -27,5 +46,3 @@
 </header>
 
 <script src="/campus-eats/js/header.js"></script>
-
-
