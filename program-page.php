@@ -2,7 +2,19 @@
 <?php
     // program-page.php
     include("include/connect.php");
-    include("include/header.php");?>
+    include("include/header.php");
+
+    $programID = $_GET['programID'];
+
+    if(!$programID) {
+        header("Location:program-register.php");
+    }
+
+    $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID`=$programID");
+    $stmt->execute();
+    $row = $stmt->fetch();
+
+
 ?>
 <html lang="en">
 
@@ -15,15 +27,8 @@
     <link href="css/program-page.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <?php
-        $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID`='1'");
-        $stmt->execute();
-        while($row = $stmt->fetch()) { 
-            ?>
+    
     <title><?php echo($row["programName"]);?></title>
-    <?php
-        }
-    ?>
 </head>
 
 <body>
@@ -33,15 +38,11 @@
 
         </div>
         <div class="wrapper">
+
             <!-- Information -->
             <div class="program-info">
                 <div class="address">
                     <h1>Address</h1>
-                    <?php
-                        $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID`='1'");
-                        $stmt->execute();
-                        while($row = $stmt->fetch()) { 
-                            ?>
                     <p> <?php echo($row["address"]);?> </p>
                 </div>
                 <div class="hours">
