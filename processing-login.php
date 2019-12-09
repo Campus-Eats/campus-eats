@@ -15,7 +15,7 @@ $row = $stmt->fetch();
 //found user
 if ($row){
     //set session variables
-    $_SESSION['id'] = $row['userID'];
+    $_SESSION['userID'] = $row['userID'];
     if($row['role'] == 'admin') {
         $_SESSION['isAdmin'] = true;
     };

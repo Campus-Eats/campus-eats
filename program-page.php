@@ -43,7 +43,7 @@
         </div>
         <div class="wrapper">
 
-            <?php if ($row['userID'] ==  $_SESSION['id']): ?>
+            <?php if ($row['userID'] ==  $_SESSION['userID']): ?>
                 <a href="program-form.php">Edit</a>
             <?php endif; ?>
             <!-- Information -->

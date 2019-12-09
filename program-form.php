@@ -6,7 +6,7 @@
     if($isAdmin) {
 
 
-        $userID = $_SESSION['id']; //2
+        $userID = $_SESSION['userID']; //2
 
         $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `userID` = '$userID' ");
         $stmt->execute();

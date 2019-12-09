@@ -3,7 +3,7 @@
         session_start();
     }
     $isLoggedIn = false;
-    if(isset($_SESSION['id'])){ 
+    if(isset($_SESSION['userID'])){ 
         $isLoggedIn = true;
     }
 ?>

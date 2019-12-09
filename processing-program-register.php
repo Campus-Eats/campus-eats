@@ -10,7 +10,7 @@ $addressDetails = $_POST["addressDetails"];
 $city = $_POST["city"];
 $phone = $_POST["phone"];
 $hours = $_POST["hours"];
-$userID = $_SESSION["id"];
+$userID = $_SESSION['userID'];
 
 $uploaddir = 'assets/';
 $image = $uploaddir . basename($_FILES['image']['name']);
