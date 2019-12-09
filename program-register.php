@@ -1,5 +1,5 @@
 <?php 
-session_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,10 +27,6 @@ session_start();
                     <h1 id="welcome">Program Register</h1>
                     <form class="text" action="processing-program-register.php" method="POST" enctype="multipart/form-data">
                         <p class="textProgramRegister">Program Name</p><input class="textfield" name="programName" type="text" required />
-
-                        <p class="textProgramRegister">Email</p><input class="textfield" name="email" type="email" required />
-
-                        <p class="textProgramRegister">Password</p><input class="textfield" name="password" type="password" required />
 
                         <p class="textProgramRegister">Street Address</p><input class="textfield" name="address" type="text" required />
 

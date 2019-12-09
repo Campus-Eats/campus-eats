@@ -5,21 +5,20 @@ include("include/connect.php");
 
 $programName = $_POST["programName"];
 $description = $_POST["description"];
-$email = $_POST["email"];
-$password = $_POST["password"];
 $address = $_POST["address"];
 $addressDetails = $_POST["addressDetails"];
 $city = $_POST["city"];
 $phone = $_POST["phone"];
 $hours = $_POST["hours"];
+$userID = $_SESSION["id"];
 
 $uploaddir = 'assets/';
 $image = $uploaddir . basename($_FILES['image']['name']);
 
 
 
-$stmt = $pdo->prepare("INSERT INTO `foodprograms`(`programName`,`description`,`email`,`password`,`address`,`addressDetails`,`city`,`phone`,`hours`,`image`) VALUES ( ? , ? , ? , ? , ? , ? , ? , ? , ? , ? );");
-$stmt->execute([$programName,$description,$email,$password,$address,$addressDetails,$city,$phone,$hours,$image]);
+$stmt = $pdo->prepare("INSERT INTO `foodprograms`(`programName`,`description`,`address`,`addressDetails`,`city`,`phone`,`hours`,`image`, `userID`) VALUES ( ? , ? , ? , ? , ? , ? , ? , ? , ?);");
+$stmt->execute([$programName,$description,$address,$addressDetails,$city,$phone,$hours,$image, $userID]);
 
 // var_dump($_POST);
 
@@ -37,7 +36,7 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $image)) {
 // print_r($_FILES);
 
 
-header("Location:login.php");
+header("Location:my-programs.php");
 
 ?>
 
