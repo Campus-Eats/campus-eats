@@ -23,8 +23,8 @@ session_start();
                 </section>
 
                 <div class="item2">                        
-                    <h1 id="welcome">Register as Student</h1>
-                    <p id="programText">If you are a Food Program looking to join Campus Eats, <a id="terms" href="register-admin.php">click here.</a></p>
+                    <h1 id="welcome">Register as Program Coordinator</h1>
+                    <p id="programText">If you are a sudent looking to join Campus Eats, <a id="terms" href="register.php">click here.</a></p>
                     <form method="POST"><br>
                         <div class="namefield">
                         <p>First Name</p><input class="nametexts" name="firstname" type="text" required />
@@ -35,7 +35,7 @@ session_start();
                         <br>
                         <p class="textRegister">Email</p><input class="textfield" name="email" type="email" required /><br>
                         <p class="textRegister">Password</p><input class="textfield" name="password" type="password" required /><br>
-                        <input style="display:none;" name="role" value="student"/>
+                        <input style="display:none;" name="role" value="admin"/>
                         <p id="conditionsRegister">By continuing the registration process, I agree to the <a id="terms" href="terms.php">Terms and Conditions.</a></p>
                         <br>
                         <button id="button" type="button" onclick="processRegister(); modalDisplay()">Register</button>

@@ -41,12 +41,13 @@ function processRegister(e){
     var lastname = document.forms[0]["lastname"];
     var email = document.forms[0]["email"];
     var password = document.forms[0]["password"];
+    var role = document.forms[0]["role"];
 
     // console.log(nom.value, email.value, password.value);
 
     xhr.open("POST", "/campus-eats/processing-register.php", true);
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
-    xhr.send("firstname="+firstname.value+"&lastname="+lastname.value+"&email="+email.value+"&password="+password.value);
+    xhr.send("firstname="+firstname.value+"&lastname="+lastname.value+"&email="+email.value+"&password="+password.value+"&role="+role.value);
 
 };
 
