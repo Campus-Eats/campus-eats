@@ -99,9 +99,9 @@ session_start();
                                     $programID = $row["programID"];
                                 }
                             ?>
-                                <!-- <a href="<?php echo("/campus-eats/program-page.php?programId=$programIdtoFetch");?>">  -->
-                                <a href="<?php echo("/campus-eats/program-page.php");?>"> 
-                                    <button class="button-small ce-button-secondary">See more
+                                <a href="<?php $programID=$program['programID'];echo("/campus-eats/program-page.php?programID=$programID");?>"> 
+                                    <button class="button-small ce-button-secondary">
+                                        See more
                                     </button>
                                 </a>
                             </div>
