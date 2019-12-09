@@ -39,7 +39,7 @@
                         <p class="textProgramRegister">Operation Hours</p><input class="textfield" name="hours" type="text" required />
                         <br>
                         <p class="textProgramRegister">Description About Your Program</p>
-                        <textarea rows="2" cols="200" style="height:100px !important;"class="textfield" placeholder="Write few lines about your program......" name="description"></textarea>
+                        <textarea rows="2" cols="200" style="height:100px !important;"class="textfield" placeholder="Write few lines about your program......" name="description" required></textarea>
                         <br>
 
                         <p class="textProgramRegister">Upload Image</p>

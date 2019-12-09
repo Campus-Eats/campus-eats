@@ -23,6 +23,8 @@
                     <li><a href="register.php">Signup</a></li>
                 <?php endif; ?>
             </ul>
+
+
             <div class="hamburger-menu">
                 <label for="toggle" onclick="showHam()">&#9776;</label>
                 <section id="hamMenu">
