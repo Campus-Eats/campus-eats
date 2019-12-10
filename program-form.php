@@ -109,6 +109,7 @@
                     <?php echo $programData['image'] ?>
                     <input id="image" name="image" type="file" /><br>
                 </div>
+                <input type="text" name="originalImage" style="display:none;" value="<?php echo $programData['image']?>"/>
                 <input id="submitBtn" type="submit" name="upload_image" value="Submit">
             </form>
             </div>

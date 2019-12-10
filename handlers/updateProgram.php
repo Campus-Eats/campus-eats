@@ -10,8 +10,16 @@
     $city = $_POST['city'];
     $phone = $_POST['phone'];
     $hours = $_POST['hours'];
-    $uploaddir = '../assets/';
-    $image = $uploaddir.basename($_FILES['image']['name']);
+    $uploaddir = 'assets/';
+
+
+
+    $image = $_POST['originalImage']; //assets/step2.png
+
+    $filename = $_FILES['image']['name'];
+    if($filename) {
+        $image = $uploaddir.basename($filename);    
+    }
     
     
     // $stmt = $pdo->prepare("UPDATE`foodprograms` ( `programName`, `description`, `email`, `password`, `address`, `addressDetails`, `city`, `phone`, `hours`, `image`) 

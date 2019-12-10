@@ -1,6 +1,9 @@
 <?php
     include("isLoggedIn.php");
     include("isAdmin.php");
+
+    // echo $isLoggedIn;
+    // echo $isAdmin;
 ?>
 <header>
     <nav class="ce-container-nav">
@@ -21,6 +24,7 @@
                 <?php if (!$isLoggedIn): ?>
                     <li><a href="login.php">Login</a></li>
                     <li><a href="register.php">Signup</a></li>
+                    <!-- <li><a style="padding: 0px 20px;" class="ce-button ce-button-primary" href="register.php">Signup</a></li> -->
                 <?php endif; ?>
             </ul>
 

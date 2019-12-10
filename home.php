@@ -24,7 +24,7 @@
                         Fill Your Fridge with Healthy and Affordable Options.
                     </div>
                     <div class="search-container">
-                        <form class="searchbar" action="./handlers/searchResults.php" method=“POST”>
+                        <form class="searchbar" action="handlers/searchResults.php" method="POST" enctype="multipart/form-data">
                             <input type="text" placeholder="Enter Your Location" name="search">
                             <button type="submit" id="cta-button">Find Food</button>
                         </form>

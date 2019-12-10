@@ -3,7 +3,8 @@
     session_start();
     // program-page.php
     include("include/connect.php");
-
+    include("include/isLoggedIn.php");
+    include("include/isAdmin.php");
     $programID = $_GET['programID'];
 
     if(!$programID) {
@@ -44,9 +45,11 @@
         </div>
         <div class="wrapper">
 
-            <?php if ($row['userID'] ==  $_SESSION['userID']): ?>
-                <a href="program-form.php">Edit</a>
-            <?php endif; ?>
+            <?php if ($isLoggedIn): ?>
+                <?php if ($row['userID'] ==  $_SESSION['userID']): ?>
+                    <a href="program-form.php">Edit</a>
+                <?php endif; ?>
+            <?php endif; ?> 
             <!-- Information -->
             <div class="program-info">
                 <div class="address">
@@ -79,9 +82,14 @@
                     <img src=<?php echo($row["itemImage"]);?> alt="food image">
                     <h1> <?php echo($row["itemName"]);?> </h1>
                     <p> <?php echo($row["itemType"]);?> </p>
-                    <div class="addtocart-button" >
-                        <button class="btn" type="submit" >Select</button>
-                    </div>                
+                
+                <?php if ($isLoggedIn): ?>
+                    <?php if (!$isAdmin): ?>
+                        <div class="addtocart-button" >
+                            <button class="btn" type="submit" >Select</button>
+                        </div>   
+                    <?php endif; ?>
+                <?php endif; ?>   
                 </div> 
                 <?php }?>
             </div>

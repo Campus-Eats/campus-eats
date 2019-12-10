@@ -12,18 +12,12 @@ session_start();
     $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `city` LIKE '%$cityToSearch%'");
     $stmt->execute();
 
-    // $programIdtoFetch = $_GET["programID"];
-	// $stmt = $pdo->prepare("SELECT * FROM `foodprograms` WHERE `programID` = '$programIdtoFetch'");
-	// $stmt->execute();
-	// $row = $stmt->fetch();
-
     $cityImage;
     $programList = array();
     while($row = $stmt->fetch()) {
         $programList[] = $row;
-        $cityImage = strtolower($row["city"]); //strtolower() function
+        $cityImage = strtolower($row["city"]); //strtolower() function/ case insensitive
     }
-    // echo($cityImage);
 ?>
 
 <!DOCTYPE html>
