@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<?php
-    session_start();
+<?php session_start();
     // program-page.php
+    
     include("include/connect.php");
     include("include/isLoggedIn.php");
     include("include/isAdmin.php");
@@ -21,6 +20,7 @@
     $user = $userStmt->fetch();
 
 ?>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
