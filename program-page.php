@@ -44,14 +44,13 @@
 
         </div>
         <div class="wrapper">
-
-            <?php if ($isLoggedIn): ?>
-                <?php if ($row['userID'] ==  $_SESSION['userID']): ?>
-                    <a href="program-form.php">Edit</a>
-                <?php endif; ?>
-            <?php endif; ?> 
             <!-- Information -->
             <div class="program-info">
+                <?php if ($isLoggedIn): ?>
+                    <?php if ($row['userID'] ==  $_SESSION['userID']): ?>
+                        <a href="program-form.php">Update My Program</a>
+                    <?php endif; ?>
+                <?php endif; ?> 
                 <div class="address">
                     <h1>Address</h1>
                     <p> <?php echo($row["address"]);?> </p>
